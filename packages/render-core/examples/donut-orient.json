@@ -1,0 +1,27 @@
+{
+  "title": "Oriented donut",
+  "description": "Free Core Orient rotates the original donut geometry without changing values.",
+  "tags": [
+    "orient",
+    "free"
+  ],
+  "spec": {
+    "chart": {
+      "type": "donut",
+      "orient": {
+        "enabled": true,
+        "angle": 90
+      }
+    },
+    "series": [
+      12,
+      25,
+      18
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C"
+    ]
+  }
+}

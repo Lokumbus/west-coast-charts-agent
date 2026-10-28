@@ -1,0 +1,52 @@
+{
+  "title": "Browser versions (sunburst)",
+  "description": "Two-level hierarchy.",
+  "tags": [
+    "types",
+    "hierarchy"
+  ],
+  "spec": {
+    "chart": {
+      "type": "sunburst",
+      "width": 480,
+      "height": 420
+    },
+    "series": [
+      {
+        "name": "Share",
+        "data": [
+          {
+            "x": "Chrome",
+            "children": [
+              {
+                "x": "Desktop",
+                "y": 38
+              },
+              {
+                "x": "Mobile",
+                "y": 25
+              }
+            ]
+          },
+          {
+            "x": "Safari",
+            "children": [
+              {
+                "x": "iOS",
+                "y": 16
+              },
+              {
+                "x": "macOS",
+                "y": 4
+              }
+            ]
+          },
+          {
+            "x": "Other",
+            "y": 17
+          }
+        ]
+      }
+    ]
+  }
+}

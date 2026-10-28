@@ -1,0 +1,48 @@
+{
+  "title": "Market map (marimekko, premium)",
+  "description": "Share by vendor and region.",
+  "tags": [
+    "premium",
+    "part-to-whole"
+  ],
+  "spec": {
+    "chart": {
+      "type": "marimekko",
+      "width": 720,
+      "height": 400
+    },
+    "series": [
+      {
+        "name": "Northwind",
+        "data": [
+          420,
+          260,
+          180
+        ]
+      },
+      {
+        "name": "Contoso",
+        "data": [
+          310,
+          240,
+          90
+        ]
+      },
+      {
+        "name": "Other",
+        "data": [
+          90,
+          80,
+          60
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "North America",
+        "Europe",
+        "Asia Pacific"
+      ]
+    }
+  }
+}

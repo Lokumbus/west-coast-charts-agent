@@ -1,0 +1,25 @@
+{
+  "title": "Budget split (pie)",
+  "description": "Three-slice pie.",
+  "tags": [
+    "core",
+    "part-to-whole"
+  ],
+  "spec": {
+    "chart": {
+      "type": "pie",
+      "width": 420,
+      "height": 320
+    },
+    "series": [
+      55,
+      30,
+      15
+    ],
+    "labels": [
+      "Engineering",
+      "Sales",
+      "Admin"
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "title": "Organisation (tree, premium)",
+  "description": "Org chart, vertical cards (samples/wcc/premium/tree.html).",
+  "tags": [
+    "premium",
+    "coverage"
+  ],
+  "spec": {
+    "chart": {
+      "type": "tree",
+      "width": 720,
+      "height": 460
+    },
+    "series": [
+      {
+        "data": [
+          {
+            "name": "Ava Chen",
+            "title": "Chief Executive Officer",
+            "children": [
+              {
+                "name": "Marcus Webb",
+                "title": "VP Engineering",
+                "children": [
+                  {
+                    "name": "Lena Ortiz",
+                    "title": "Platform",
+                    "children": [
+                      {
+                        "name": "Jon Park",
+                        "title": "SRE"
+                      },
+                      {
+                        "name": "Mia Russo",
+                        "title": "Infra"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Theo Grant",
+                    "title": "Product Eng",
+                    "children": [
+                      {
+                        "name": "Sam Lee",
+                        "title": "Frontend"
+                      },
+                      {
+                        "name": "Ines Kahl",
+                        "title": "Mobile"
+                      },
+                      {
+                        "name": "Rui Sato",
+                        "title": "API"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Priya Nair",
+                "title": "VP Product",
+                "children": [
+                  {
+                    "name": "Noah Fox",
+                    "title": "Design lead"
+                  },
+                  {
+                    "name": "Ella Vance",
+                    "title": "PM, Billing"
+                  }
+                ]
+              },
+              {
+                "name": "Daniel Brooks",
+                "title": "VP Sales",
+                "children": [
+                  {
+                    "name": "Zoe Martin",
+                    "title": "EMEA",
+                    "children": [
+                      {
+                        "name": "Luca Moretti",
+                        "title": "AE"
+                      },
+                      {
+                        "name": "Hanna Berg",
+                        "title": "AE"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Omar Haddad",
+                    "title": "Americas"
+                  }
+                ]
+              },
+              {
+                "name": "Sofia Klein",
+                "title": "CFO",
+                "children": [
+                  {
+                    "name": "Ben Adler",
+                    "title": "Controller"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "plotOptions": {
+      "tree": {}
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Vitals clock demo",
+  "description": "Invented readings for testing rendering, not clinical thresholds or medical guidance.",
+  "tags": [
+    "medical",
+    "vitals"
+  ],
+  "spec": {
+    "chart": {
+      "type": "vitalsClock",
+      "height": 480
+    },
+    "series": [],
+    "plotOptions": {
+      "vitalsClock": {
+        "time": {
+          "start": 1772409600000,
+          "span": "12h",
+          "step": "60min"
+        },
+        "now": 1772427600000,
+        "timeZone": "UTC",
+        "params": [
+          {
+            "id": "hr",
+            "title": "Heart rate",
+            "short": "HR",
+            "unit": "/min",
+            "kind": "columns",
+            "data": [
+              [
+                1772409600000,
+                72
+              ],
+              [
+                1772413200000,
+                80
+              ],
+              [
+                1772416800000,
+                77
+              ]
+            ]
+          }
+        ],
+        "demo": "Invented demo data"
+      }
+    }
+  }
+}

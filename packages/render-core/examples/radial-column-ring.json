@@ -1,0 +1,83 @@
+{
+  "title": "Requests per hour (radialColumn, premium)",
+  "description": "24 bars around a ring; centre shows the mean.",
+  "tags": [
+    "premium",
+    "time",
+    "radial"
+  ],
+  "spec": {
+    "chart": {
+      "type": "radialColumn",
+      "width": 520,
+      "height": 480
+    },
+    "series": [
+      {
+        "name": "Requests",
+        "data": [
+          80,
+          50,
+          45,
+          54,
+          45,
+          50,
+          80,
+          82,
+          61,
+          60,
+          59,
+          38,
+          40,
+          70,
+          75,
+          66,
+          75,
+          70,
+          40,
+          38,
+          59,
+          60,
+          61,
+          82
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "00:00",
+        "01:00",
+        "02:00",
+        "03:00",
+        "04:00",
+        "05:00",
+        "06:00",
+        "07:00",
+        "08:00",
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00",
+        "13:00",
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00",
+        "23:00"
+      ]
+    },
+    "plotOptions": {
+      "radialColumn": {
+        "aggregate": "mean",
+        "center": {
+          "label": "Mean requests/h"
+        }
+      }
+    }
+  }
+}

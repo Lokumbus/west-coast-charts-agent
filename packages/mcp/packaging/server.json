@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lokumbus/west-coast-charts-agent",
+  "title": "West Coast Charts",
+  "description": "Render, validate and describe charts headlessly: SVG/PNG plus a verification table for agents.",
+  "websiteUrl": "https://westcoast-charts.com/agents/",
+  "repository": {
+    "url": "https://github.com/Lokumbus/west-coast-charts-agent",
+    "source": "github",
+    "subfolder": "packages/mcp"
+  },
+  "version": "0.2.0",
+  "packages": []
+}

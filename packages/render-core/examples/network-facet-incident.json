@@ -1,0 +1,584 @@
+{
+  "title": "Incident on the production estate (network facet layer, premium)",
+  "description": "network layout.type facet, layer module network-facet (samples/wcc/gallery/premium/network/facet-incident.html).",
+  "tags": [
+    "premium",
+    "coverage"
+  ],
+  "spec": {
+    "chart": {
+      "type": "network",
+      "width": 720,
+      "height": 640
+    },
+    "series": [
+      {
+        "name": "Production estate",
+        "nodes": [
+          {
+            "id": "cp",
+            "name": "Global control plane",
+            "level": 0,
+            "value": 900
+          },
+          {
+            "id": "fra",
+            "name": "Frankfurt",
+            "group": "Frankfurt",
+            "level": 1,
+            "value": 525
+          },
+          {
+            "id": "fra/k8s-a",
+            "name": "fra-k8s-a",
+            "group": "Frankfurt",
+            "level": 2,
+            "value": 224
+          },
+          {
+            "id": "fra/authz-cache",
+            "name": "authz-cache",
+            "group": "Frankfurt",
+            "level": 3,
+            "value": 137,
+            "keys": [
+              "identity"
+            ],
+            "severity": "critical",
+            "anomaly": "evictions ×14",
+            "badge": "p99 3.8 s"
+          },
+          {
+            "id": "fra/session-api",
+            "name": "session-api",
+            "group": "Frankfurt",
+            "level": 3,
+            "value": 127,
+            "keys": [
+              "identity"
+            ],
+            "severity": "warning",
+            "anomaly": "token refresh storm"
+          },
+          {
+            "id": "fra/profile",
+            "name": "profile",
+            "group": "Frankfurt",
+            "level": 3,
+            "value": 52
+          },
+          {
+            "id": "fra/k8s-b",
+            "name": "fra-k8s-b",
+            "group": "Frankfurt",
+            "level": 2,
+            "value": 222
+          },
+          {
+            "id": "fra/catalog",
+            "name": "catalog",
+            "group": "Frankfurt",
+            "level": 3,
+            "value": 112
+          },
+          {
+            "id": "fra/pricing",
+            "name": "pricing",
+            "group": "Frankfurt",
+            "level": 3,
+            "value": 97
+          },
+          {
+            "id": "dub",
+            "name": "Dublin",
+            "group": "Dublin",
+            "level": 1,
+            "value": 435
+          },
+          {
+            "id": "dub/k8s-a",
+            "name": "dub-k8s-a",
+            "group": "Dublin",
+            "level": 2,
+            "value": 225
+          },
+          {
+            "id": "dub/checkout",
+            "name": "checkout",
+            "group": "Dublin",
+            "level": 3,
+            "value": 121,
+            "severity": "warning",
+            "anomaly": "retries ×6"
+          },
+          {
+            "id": "dub/cart",
+            "name": "cart",
+            "group": "Dublin",
+            "level": 3,
+            "value": 112
+          },
+          {
+            "id": "dub/k8s-b",
+            "name": "dub-k8s-b",
+            "group": "Dublin",
+            "level": 2,
+            "value": 197
+          },
+          {
+            "id": "dub/notify",
+            "name": "notify",
+            "group": "Dublin",
+            "level": 3,
+            "value": 53
+          },
+          {
+            "id": "dub/consent",
+            "name": "consent",
+            "group": "Dublin",
+            "level": 3,
+            "value": 120
+          },
+          {
+            "id": "iad",
+            "name": "Virginia",
+            "group": "Virginia",
+            "level": 1,
+            "value": 460
+          },
+          {
+            "id": "iad/k8s-a",
+            "name": "iad-k8s-a",
+            "group": "Virginia",
+            "level": 2,
+            "value": 270
+          },
+          {
+            "id": "iad/billing-ledger",
+            "name": "billing-ledger",
+            "group": "Virginia",
+            "level": 3,
+            "value": 140,
+            "severity": "critical",
+            "anomaly": "write timeouts",
+            "badge": "5xx 4.1%"
+          },
+          {
+            "id": "iad/invoices",
+            "name": "invoices",
+            "group": "Virginia",
+            "level": 3,
+            "value": 95
+          },
+          {
+            "id": "iad/tax",
+            "name": "tax",
+            "group": "Virginia",
+            "level": 3,
+            "value": 81
+          },
+          {
+            "id": "iad/k8s-b",
+            "name": "iad-k8s-b",
+            "group": "Virginia",
+            "level": 2,
+            "value": 274
+          },
+          {
+            "id": "iad/payouts",
+            "name": "payouts",
+            "group": "Virginia",
+            "level": 3,
+            "value": 73
+          },
+          {
+            "id": "iad/batch",
+            "name": "iad-batch",
+            "group": "Virginia",
+            "level": 2,
+            "value": 180
+          },
+          {
+            "id": "iad/exports",
+            "name": "exports",
+            "group": "Virginia",
+            "level": 3,
+            "value": 72
+          },
+          {
+            "id": "pdx",
+            "name": "Oregon",
+            "group": "Oregon",
+            "level": 1,
+            "value": 507
+          },
+          {
+            "id": "pdx/k8s-a",
+            "name": "pdx-k8s-a",
+            "group": "Oregon",
+            "level": 2,
+            "value": 256
+          },
+          {
+            "id": "pdx/media-transcode",
+            "name": "media-transcode",
+            "group": "Oregon",
+            "level": 3,
+            "value": 135,
+            "severity": "ok"
+          },
+          {
+            "id": "pdx/thumbs",
+            "name": "thumbs",
+            "group": "Oregon",
+            "level": 3,
+            "value": 112
+          },
+          {
+            "id": "pdx/k8s-b",
+            "name": "pdx-k8s-b",
+            "group": "Oregon",
+            "level": 2,
+            "value": 165
+          },
+          {
+            "id": "pdx/uploads",
+            "name": "uploads",
+            "group": "Oregon",
+            "level": 3,
+            "value": 68
+          },
+          {
+            "id": "sin",
+            "name": "Singapore",
+            "group": "Singapore",
+            "level": 1,
+            "value": 494
+          },
+          {
+            "id": "sin/k8s-a",
+            "name": "sin-k8s-a",
+            "group": "Singapore",
+            "level": 2,
+            "value": 176
+          },
+          {
+            "id": "sin/search-index",
+            "name": "search-index",
+            "group": "Singapore",
+            "level": 3,
+            "value": 113,
+            "severity": "info",
+            "anomaly": "replica lag 90 s"
+          },
+          {
+            "id": "sin/search-api",
+            "name": "search-api",
+            "group": "Singapore",
+            "level": 3,
+            "value": 93
+          },
+          {
+            "id": "sin/k8s-b",
+            "name": "sin-k8s-b",
+            "group": "Singapore",
+            "level": 2,
+            "value": 212
+          },
+          {
+            "id": "sin/recs",
+            "name": "recs",
+            "group": "Singapore",
+            "level": 3,
+            "value": 79
+          },
+          {
+            "id": "gru",
+            "name": "São Paulo",
+            "group": "São Paulo",
+            "level": 1,
+            "value": 496
+          },
+          {
+            "id": "gru/k8s-a",
+            "name": "gru-k8s-a",
+            "group": "São Paulo",
+            "level": 2,
+            "value": 213
+          },
+          {
+            "id": "gru/pix-gateway",
+            "name": "pix-gateway",
+            "group": "São Paulo",
+            "level": 3,
+            "value": 44
+          },
+          {
+            "id": "gru/fraud-score",
+            "name": "fraud-score",
+            "group": "São Paulo",
+            "level": 3,
+            "value": 96
+          }
+        ],
+        "edges": [
+          [
+            "cp",
+            "fra",
+            3
+          ],
+          [
+            "fra",
+            "fra/k8s-a",
+            2
+          ],
+          [
+            "fra/k8s-a",
+            "fra/authz-cache"
+          ],
+          [
+            "fra/k8s-a",
+            "fra/session-api"
+          ],
+          [
+            "fra/k8s-a",
+            "fra/profile"
+          ],
+          [
+            "fra",
+            "fra/k8s-b",
+            2
+          ],
+          [
+            "fra/k8s-b",
+            "fra/catalog"
+          ],
+          [
+            "fra/k8s-b",
+            "fra/pricing"
+          ],
+          [
+            "cp",
+            "dub",
+            3
+          ],
+          [
+            "dub",
+            "dub/k8s-a",
+            2
+          ],
+          [
+            "dub/k8s-a",
+            "dub/checkout"
+          ],
+          [
+            "dub/k8s-a",
+            "dub/cart"
+          ],
+          [
+            "dub",
+            "dub/k8s-b",
+            2
+          ],
+          [
+            "dub/k8s-b",
+            "dub/notify"
+          ],
+          [
+            "dub/k8s-b",
+            "dub/consent"
+          ],
+          [
+            "cp",
+            "iad",
+            3
+          ],
+          [
+            "iad",
+            "iad/k8s-a",
+            2
+          ],
+          [
+            "iad/k8s-a",
+            "iad/billing-ledger"
+          ],
+          [
+            "iad/k8s-a",
+            "iad/invoices"
+          ],
+          [
+            "iad/k8s-a",
+            "iad/tax"
+          ],
+          [
+            "iad",
+            "iad/k8s-b",
+            2
+          ],
+          [
+            "iad/k8s-b",
+            "iad/payouts"
+          ],
+          [
+            "iad",
+            "iad/batch",
+            2
+          ],
+          [
+            "iad/batch",
+            "iad/exports"
+          ],
+          [
+            "cp",
+            "pdx",
+            3
+          ],
+          [
+            "pdx",
+            "pdx/k8s-a",
+            2
+          ],
+          [
+            "pdx/k8s-a",
+            "pdx/media-transcode"
+          ],
+          [
+            "pdx/k8s-a",
+            "pdx/thumbs"
+          ],
+          [
+            "pdx",
+            "pdx/k8s-b",
+            2
+          ],
+          [
+            "pdx/k8s-b",
+            "pdx/uploads"
+          ],
+          [
+            "cp",
+            "sin",
+            3
+          ],
+          [
+            "sin",
+            "sin/k8s-a",
+            2
+          ],
+          [
+            "sin/k8s-a",
+            "sin/search-index"
+          ],
+          [
+            "sin/k8s-a",
+            "sin/search-api"
+          ],
+          [
+            "sin",
+            "sin/k8s-b",
+            2
+          ],
+          [
+            "sin/k8s-b",
+            "sin/recs"
+          ],
+          [
+            "cp",
+            "gru",
+            3
+          ],
+          [
+            "gru",
+            "gru/k8s-a",
+            2
+          ],
+          [
+            "gru/k8s-a",
+            "gru/pix-gateway"
+          ],
+          [
+            "gru/k8s-a",
+            "gru/fraud-score"
+          ],
+          [
+            "fra/k8s-a",
+            "dub/k8s-a"
+          ],
+          [
+            "iad/k8s-a",
+            "pdx/k8s-a"
+          ],
+          [
+            "sin/k8s-a",
+            "pdx/k8s-b"
+          ],
+          [
+            "gru/k8s-a",
+            "iad/k8s-b"
+          ],
+          [
+            "dub/cart",
+            "fra/pricing"
+          ],
+          [
+            "iad/invoices",
+            "dub/notify"
+          ],
+          [
+            "sin/recs",
+            "fra/catalog"
+          ],
+          [
+            "gru/fraud-score",
+            "iad/billing-ledger"
+          ],
+          [
+            "fra/profile",
+            "dub/consent"
+          ],
+          [
+            "pdx/uploads",
+            "pdx/thumbs"
+          ]
+        ],
+        "paths": [
+          {
+            "name": "INC-4127 · cache eviction",
+            "nodes": [
+              "fra/authz-cache",
+              "fra/session-api",
+              "dub/checkout",
+              "iad/billing-ledger"
+            ],
+            "severity": "critical"
+          }
+        ]
+      }
+    ],
+    "plotOptions": {
+      "network": {
+        "layout": {
+          "type": "facet"
+        },
+        "nodes": {
+          "minRadius": 4,
+          "maxRadius": 15
+        },
+        "labels": {
+          "max": 60
+        },
+        "facet": {
+          "levels": [
+            "Control plane",
+            "Regions",
+            "Clusters",
+            "Services"
+          ],
+          "legend": {
+            "title": "Levels"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Practice schedule demo",
+  "description": "Invented rooms and anonymous appointments.",
+  "tags": [
+    "medical",
+    "schedule"
+  ],
+  "spec": {
+    "chart": {
+      "type": "schedule",
+      "height": 400,
+      "width": 900
+    },
+    "series": [],
+    "plotOptions": {
+      "schedule": {
+        "date": "2026-10-26",
+        "timeZone": "Europe/Berlin",
+        "hours": {
+          "open": "08:00",
+          "close": "12:00"
+        },
+        "resources": [
+          {
+            "id": "R1",
+            "name": "Room 1"
+          },
+          {
+            "id": "R2",
+            "name": "Room 2"
+          }
+        ],
+        "people": [
+          {
+            "id": "D1",
+            "name": "Clinician A"
+          }
+        ],
+        "items": [
+          {
+            "id": "a",
+            "resource": "R1",
+            "start": "08:00",
+            "end": "08:30",
+            "people": [
+              "D1"
+            ],
+            "patient": "Demo A"
+          },
+          {
+            "id": "b",
+            "resource": "R2",
+            "start": "08:20",
+            "end": "08:40",
+            "people": [
+              "D1"
+            ],
+            "patient": "Demo B"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Budget flows (sankey, premium)",
+  "description": "Income sources into spending categories.",
+  "tags": [
+    "premium",
+    "flow"
+  ],
+  "spec": {
+    "chart": {
+      "type": "sankey",
+      "width": 720,
+      "height": 380
+    },
+    "series": [
+      {
+        "name": "P&L",
+        "data": [
+          {
+            "from": "Subscriptions",
+            "to": "Revenue",
+            "value": 1840
+          },
+          {
+            "from": "Services",
+            "to": "Revenue",
+            "value": 520
+          },
+          {
+            "from": "Revenue",
+            "to": "Gross profit",
+            "value": 1960
+          },
+          {
+            "from": "Revenue",
+            "to": "COGS",
+            "value": 400
+          },
+          {
+            "from": "Gross profit",
+            "to": "OpEx",
+            "value": 1100
+          },
+          {
+            "from": "Gross profit",
+            "to": "Operating profit",
+            "value": 860
+          }
+        ]
+      }
+    ]
+  }
+}

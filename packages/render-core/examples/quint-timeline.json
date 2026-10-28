@@ -1,0 +1,121 @@
+{
+  "title": "quintTimeline five-lane demo",
+  "description": "Invented hourly operations values. Based on the released RC7 Quint option contract; no production data.",
+  "tags": [
+    "quint",
+    "operations",
+    "five-lanes"
+  ],
+  "spec": {
+    "chart": {
+      "type": "quintTimeline",
+      "height": 760
+    },
+    "series": [
+      {
+        "name": "Requests",
+        "lane": "req",
+        "data": [
+          120,
+          180,
+          100,
+          140
+        ],
+        "errorRate": [
+          0.1,
+          2,
+          0.2,
+          0.3
+        ],
+        "typical": [
+          110,
+          160,
+          120,
+          140
+        ]
+      },
+      {
+        "name": "API load",
+        "lane": "load",
+        "data": [
+          30,
+          80,
+          45,
+          50
+        ]
+      },
+      {
+        "name": "Budget remaining",
+        "lane": "budget",
+        "data": [
+          95,
+          90,
+          88,
+          87
+        ],
+        "availability": 99.9,
+        "p95": 120
+      },
+      {
+        "name": "Latency",
+        "lane": "latency",
+        "data": [
+          110,
+          180,
+          130,
+          120
+        ]
+      },
+      {
+        "name": "Compute cost",
+        "lane": "cost",
+        "data": [
+          10,
+          12,
+          11,
+          13
+        ]
+      }
+    ],
+    "plotOptions": {
+      "quint": {
+        "time": {
+          "start": "2026-03-02T00:00:00Z",
+          "step": 3600000
+        },
+        "lanes": [
+          {
+            "id": "req",
+            "kind": "events",
+            "title": "Requests",
+            "unit": "requests / h"
+          },
+          {
+            "id": "load",
+            "kind": "heatmap",
+            "title": "Load",
+            "unit": "%"
+          },
+          {
+            "id": "budget",
+            "kind": "budget",
+            "title": "Budget",
+            "unit": "%"
+          },
+          {
+            "id": "latency",
+            "kind": "lines",
+            "title": "Latency",
+            "unit": "ms"
+          },
+          {
+            "id": "cost",
+            "kind": "stacked",
+            "title": "Compute cost",
+            "unit": "EUR / h"
+          }
+        ]
+      }
+    }
+  }
+}

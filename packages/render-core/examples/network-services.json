@@ -1,0 +1,83 @@
+{
+  "title": "Service dependencies (network, premium)",
+  "description": "Small service graph.",
+  "tags": [
+    "premium",
+    "graph"
+  ],
+  "spec": {
+    "chart": {
+      "type": "network",
+      "width": 640,
+      "height": 420
+    },
+    "series": [
+      {
+        "nodes": [
+          {
+            "id": "gw",
+            "name": "API gateway",
+            "group": "Edge",
+            "value": 90
+          },
+          {
+            "id": "auth",
+            "name": "Auth",
+            "group": "Core",
+            "value": 70
+          },
+          {
+            "id": "orders",
+            "name": "Orders",
+            "group": "Core",
+            "value": 80
+          },
+          {
+            "id": "billing",
+            "name": "Billing",
+            "group": "Core",
+            "value": 55
+          },
+          {
+            "id": "pg",
+            "name": "Postgres",
+            "group": "Data",
+            "value": 85
+          },
+          {
+            "id": "kafka",
+            "name": "Kafka",
+            "group": "Data",
+            "value": 65
+          }
+        ],
+        "edges": [
+          {
+            "source": "gw",
+            "target": "auth"
+          },
+          {
+            "source": "gw",
+            "target": "orders"
+          },
+          {
+            "source": "orders",
+            "target": "billing"
+          },
+          {
+            "source": "orders",
+            "target": "pg"
+          },
+          {
+            "source": "billing",
+            "target": "kafka"
+          },
+          {
+            "source": "auth",
+            "target": "pg"
+          }
+        ]
+      }
+    ]
+  }
+}

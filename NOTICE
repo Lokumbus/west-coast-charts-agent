@@ -1,0 +1,15 @@
+West Coast Charts agent tooling
+
+Original tooling is licensed under MIT; see LICENSE. This release prepares the
+original owner-controlled tooling for public distribution. Source provenance:
+wcc-agent commit 31d1d09 plus the documented 0.2.0 working-tree changes.
+
+Bundled fonts retain their own SIL Open Font License notices. Inter 4.1 derived
+tabular faces use the reserved-name-safe WCCInterTabular name. Liberation Sans
+2.1.5 is retained with its complete copyright and license text. See
+packages/render-core/fonts/FONTS.md and LICENSE-*.txt for exact provenance.
+
+The chart library is a separate dependency. Core retains its ApexCharts MIT
+attribution and third-party notices in its own distribution. This archive does
+not contain Premium chart implementation, license keys, or a signing key.
+The MIT tooling license does not grant rights to separately supplied libraries.

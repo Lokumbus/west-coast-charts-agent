@@ -1,0 +1,772 @@
+{
+  "title": "Matrix core: health checks, owners and 14 days of alerts (radialColumn, premium)",
+  "description": "radialColumn showcase \"matrix-checks\" (samples/wcc/premium/radial-column.showcase.js); inner layers: matrix + donut.",
+  "tags": [
+    "premium",
+    "coverage"
+  ],
+  "spec": {
+    "chart": {
+      "type": "radialColumn",
+      "height": 640,
+      "width": 720
+    },
+    "series": [
+      {
+        "name": "Alert minutes",
+        "data": [
+          12,
+          6,
+          16,
+          8,
+          3,
+          7,
+          5,
+          7,
+          6,
+          10,
+          6,
+          9,
+          9,
+          17,
+          2,
+          1,
+          1,
+          4,
+          1,
+          1,
+          5,
+          5,
+          2,
+          2,
+          5,
+          3,
+          7,
+          5,
+          7,
+          7,
+          6,
+          10,
+          4,
+          4,
+          5,
+          11,
+          12,
+          3,
+          15,
+          12,
+          10,
+          38,
+          13,
+          7,
+          10,
+          6,
+          8,
+          7,
+          18,
+          7,
+          7,
+          17,
+          30,
+          15,
+          55,
+          19,
+          5,
+          7,
+          5,
+          4,
+          9,
+          11,
+          10,
+          4,
+          8,
+          5,
+          5,
+          7,
+          16,
+          21,
+          7,
+          10,
+          7,
+          9,
+          6,
+          13,
+          8,
+          9,
+          7,
+          11,
+          5,
+          15,
+          12,
+          16,
+          9,
+          14,
+          10,
+          16,
+          9,
+          14,
+          18,
+          8,
+          7,
+          7,
+          18,
+          20,
+          44,
+          36,
+          2,
+          4,
+          3,
+          1,
+          1,
+          1,
+          4,
+          3,
+          1,
+          3,
+          2,
+          3,
+          4,
+          8,
+          7,
+          3,
+          9,
+          4,
+          6,
+          7,
+          4,
+          11,
+          4,
+          3,
+          11,
+          28,
+          13,
+          10,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          3,
+          7,
+          4
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "Edge · D-13",
+        "Edge · D-12",
+        "Edge · D-11",
+        "Edge · D-10",
+        "Edge · D-9",
+        "Edge · D-8",
+        "Edge · D-7",
+        "Edge · D-6",
+        "Edge · D-5",
+        "Edge · D-4",
+        "Edge · D-3",
+        "Edge · D-2",
+        "Edge · D-1",
+        "Edge · D-0",
+        "Rider API · D-13",
+        "Rider API · D-12",
+        "Rider API · D-11",
+        "Rider API · D-10",
+        "Rider API · D-9",
+        "Rider API · D-8",
+        "Rider API · D-7",
+        "Rider API · D-6",
+        "Rider API · D-5",
+        "Rider API · D-4",
+        "Rider API · D-3",
+        "Rider API · D-2",
+        "Rider API · D-1",
+        "Rider API · D-0",
+        "Driver API · D-13",
+        "Driver API · D-12",
+        "Driver API · D-11",
+        "Driver API · D-10",
+        "Driver API · D-9",
+        "Driver API · D-8",
+        "Driver API · D-7",
+        "Driver API · D-6",
+        "Driver API · D-5",
+        "Driver API · D-4",
+        "Driver API · D-3",
+        "Driver API · D-2",
+        "Driver API · D-1",
+        "Driver API · D-0",
+        "Matching · D-13",
+        "Matching · D-12",
+        "Matching · D-11",
+        "Matching · D-10",
+        "Matching · D-9",
+        "Matching · D-8",
+        "Matching · D-7",
+        "Matching · D-6",
+        "Matching · D-5",
+        "Matching · D-4",
+        "Matching · D-3",
+        "Matching · D-2",
+        "Matching · D-1",
+        "Matching · D-0",
+        "Pricing · D-13",
+        "Pricing · D-12",
+        "Pricing · D-11",
+        "Pricing · D-10",
+        "Pricing · D-9",
+        "Pricing · D-8",
+        "Pricing · D-7",
+        "Pricing · D-6",
+        "Pricing · D-5",
+        "Pricing · D-4",
+        "Pricing · D-3",
+        "Pricing · D-2",
+        "Pricing · D-1",
+        "Pricing · D-0",
+        "Geo index · D-13",
+        "Geo index · D-12",
+        "Geo index · D-11",
+        "Geo index · D-10",
+        "Geo index · D-9",
+        "Geo index · D-8",
+        "Geo index · D-7",
+        "Geo index · D-6",
+        "Geo index · D-5",
+        "Geo index · D-4",
+        "Geo index · D-3",
+        "Geo index · D-2",
+        "Geo index · D-1",
+        "Geo index · D-0",
+        "Payments · D-13",
+        "Payments · D-12",
+        "Payments · D-11",
+        "Payments · D-10",
+        "Payments · D-9",
+        "Payments · D-8",
+        "Payments · D-7",
+        "Payments · D-6",
+        "Payments · D-5",
+        "Payments · D-4",
+        "Payments · D-3",
+        "Payments · D-2",
+        "Payments · D-1",
+        "Payments · D-0",
+        "Notify · D-13",
+        "Notify · D-12",
+        "Notify · D-11",
+        "Notify · D-10",
+        "Notify · D-9",
+        "Notify · D-8",
+        "Notify · D-7",
+        "Notify · D-6",
+        "Notify · D-5",
+        "Notify · D-4",
+        "Notify · D-3",
+        "Notify · D-2",
+        "Notify · D-1",
+        "Notify · D-0",
+        "Ledger · D-13",
+        "Ledger · D-12",
+        "Ledger · D-11",
+        "Ledger · D-10",
+        "Ledger · D-9",
+        "Ledger · D-8",
+        "Ledger · D-7",
+        "Ledger · D-6",
+        "Ledger · D-5",
+        "Ledger · D-4",
+        "Ledger · D-3",
+        "Ledger · D-2",
+        "Ledger · D-1",
+        "Ledger · D-0",
+        "Search · D-13",
+        "Search · D-12",
+        "Search · D-11",
+        "Search · D-10",
+        "Search · D-9",
+        "Search · D-8",
+        "Search · D-7",
+        "Search · D-6",
+        "Search · D-5",
+        "Search · D-4",
+        "Search · D-3",
+        "Search · D-2",
+        "Search · D-1",
+        "Search · D-0"
+      ]
+    },
+    "colors": [
+      "#94a3b8"
+    ],
+    "plotOptions": {
+      "radialColumn": {
+        "innerRadius": 0.7,
+        "hole": "84%",
+        "categoryLabels": {
+          "step": 1,
+          "orientation": "horizontal"
+        },
+        "link": {
+          "mode": "map",
+          "unit": "service-days",
+          "basis": "10 services × 14 days"
+        },
+        "layers": [
+          {
+            "type": "matrix",
+            "name": "Checks",
+            "rows": [
+              {
+                "id": "Edge",
+                "name": "Edge",
+                "keys": [
+                  "Edge"
+                ],
+                "link": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13
+                ]
+              },
+              {
+                "id": "Rider API",
+                "name": "Rider API",
+                "keys": [
+                  "Rider API"
+                ],
+                "link": [
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27
+                ]
+              },
+              {
+                "id": "Driver API",
+                "name": "Driver API",
+                "keys": [
+                  "Driver API"
+                ],
+                "link": [
+                  28,
+                  29,
+                  30,
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39,
+                  40,
+                  41
+                ]
+              },
+              {
+                "id": "Matching",
+                "name": "Matching",
+                "keys": [
+                  "Matching"
+                ],
+                "link": [
+                  42,
+                  43,
+                  44,
+                  45,
+                  46,
+                  47,
+                  48,
+                  49,
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55
+                ]
+              },
+              {
+                "id": "Pricing",
+                "name": "Pricing",
+                "keys": [
+                  "Pricing"
+                ],
+                "link": [
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69
+                ]
+              },
+              {
+                "id": "Geo index",
+                "name": "Geo index",
+                "keys": [
+                  "Geo index"
+                ],
+                "link": [
+                  70,
+                  71,
+                  72,
+                  73,
+                  74,
+                  75,
+                  76,
+                  77,
+                  78,
+                  79,
+                  80,
+                  81,
+                  82,
+                  83
+                ]
+              },
+              {
+                "id": "Payments",
+                "name": "Payments",
+                "keys": [
+                  "Payments"
+                ],
+                "link": [
+                  84,
+                  85,
+                  86,
+                  87,
+                  88,
+                  89,
+                  90,
+                  91,
+                  92,
+                  93,
+                  94,
+                  95,
+                  96,
+                  97
+                ]
+              },
+              {
+                "id": "Notify",
+                "name": "Notify",
+                "keys": [
+                  "Notify"
+                ],
+                "link": [
+                  98,
+                  99,
+                  100,
+                  101,
+                  102,
+                  103,
+                  104,
+                  105,
+                  106,
+                  107,
+                  108,
+                  109,
+                  110,
+                  111
+                ]
+              },
+              {
+                "id": "Ledger",
+                "name": "Ledger",
+                "keys": [
+                  "Ledger"
+                ],
+                "link": [
+                  112,
+                  113,
+                  114,
+                  115,
+                  116,
+                  117,
+                  118,
+                  119,
+                  120,
+                  121,
+                  122,
+                  123,
+                  124,
+                  125
+                ]
+              },
+              {
+                "id": "Search",
+                "name": "Search",
+                "keys": [
+                  "Search"
+                ],
+                "link": [
+                  126,
+                  127,
+                  128,
+                  129,
+                  130,
+                  131,
+                  132,
+                  133,
+                  134,
+                  135,
+                  136,
+                  137,
+                  138,
+                  139
+                ]
+              }
+            ],
+            "cols": [
+              {
+                "id": "Latency",
+                "name": "Latency",
+                "short": "LAT",
+                "link": [
+                  38,
+                  39,
+                  40,
+                  41,
+                  52,
+                  53,
+                  54,
+                  55
+                ]
+              },
+              {
+                "id": "Errors",
+                "name": "Errors",
+                "short": "ERR",
+                "link": [
+                  52,
+                  53,
+                  54,
+                  55,
+                  66,
+                  67,
+                  68,
+                  69
+                ]
+              },
+              {
+                "id": "Saturation",
+                "name": "Saturation",
+                "short": "SAT",
+                "link": [
+                  52,
+                  53,
+                  54,
+                  55,
+                  80,
+                  81,
+                  82,
+                  83
+                ]
+              },
+              {
+                "id": "Certs",
+                "name": "Certs",
+                "short": "CER",
+                "link": [
+                  10,
+                  11,
+                  12,
+                  13,
+                  94,
+                  95,
+                  96,
+                  97
+                ]
+              },
+              {
+                "id": "Backups",
+                "name": "Backups",
+                "short": "BAC",
+                "link": [
+                  122,
+                  123,
+                  124,
+                  125
+                ]
+              },
+              {
+                "id": "Deploy",
+                "name": "Deploy",
+                "short": "DEP",
+                "link": [
+                  52,
+                  53,
+                  54,
+                  55
+                ]
+              }
+            ],
+            "data": [
+              [
+                "ok",
+                "ok",
+                "ok",
+                "warn",
+                "ok",
+                "ok"
+              ],
+              [
+                "ok",
+                "info",
+                "ok",
+                "ok",
+                "ok",
+                "ok"
+              ],
+              [
+                "warn",
+                "ok",
+                "ok",
+                "ok",
+                "ok",
+                "info"
+              ],
+              [
+                "crit",
+                "crit",
+                "warn",
+                "ok",
+                "ok",
+                "warn"
+              ],
+              [
+                "ok",
+                "warn",
+                "ok",
+                "ok",
+                "unknown",
+                "ok"
+              ],
+              [
+                "ok",
+                "ok",
+                "warn",
+                "ok",
+                "ok",
+                "ok"
+              ],
+              [
+                "ok",
+                "ok",
+                "ok",
+                "crit",
+                "ok",
+                "ok"
+              ],
+              [
+                "ok",
+                "ok",
+                "ok",
+                "ok",
+                "ok",
+                "info"
+              ],
+              [
+                "ok",
+                "ok",
+                "info",
+                "ok",
+                "warn",
+                "ok"
+              ],
+              [
+                "unknown",
+                "unknown",
+                "ok",
+                "ok",
+                "ok",
+                "ok"
+              ]
+            ]
+          },
+          {
+            "type": "donut",
+            "name": "Owning team",
+            "data": [
+              {
+                "x": "Marketplace",
+                "y": 3,
+                "color": "#6366f1",
+                "keys": [
+                  "Rider API",
+                  "Driver API",
+                  "Matching"
+                ],
+                "label": "Marketplace"
+              },
+              {
+                "x": "Money",
+                "y": 3,
+                "color": "#10b981",
+                "keys": [
+                  "Pricing",
+                  "Payments",
+                  "Ledger"
+                ],
+                "label": "Money"
+              },
+              {
+                "x": "Platform",
+                "y": 4,
+                "color": "#64748b",
+                "keys": [
+                  "Edge",
+                  "Geo index",
+                  "Notify",
+                  "Search"
+                ],
+                "label": "Platform"
+              }
+            ],
+            "thickness": 14,
+            "padding": 2,
+            "link": false,
+            "legendTitle": "Teams"
+          }
+        ]
+      }
+    }
+  }
+}

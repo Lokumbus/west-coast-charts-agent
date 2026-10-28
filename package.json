@@ -1,0 +1,15 @@
+{
+  "name": "wcc-agent",
+  "private": true,
+  "version": "0.2.0",
+  "description": "West Coast Charts agent tooling: headless render core, CLI wcc, MCP server",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test packages/*/test/*.test.js"
+  }
+}

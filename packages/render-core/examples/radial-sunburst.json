@@ -1,0 +1,138 @@
+{
+  "title": "Sunburst + column ring (radialColumn, premium)",
+  "description": "radialColumn showcase \"sunburst\" (samples/wcc/premium/radial-column.showcase.js); inner layers: sunburst.",
+  "tags": [
+    "premium",
+    "coverage"
+  ],
+  "spec": {
+    "chart": {
+      "type": "radialColumn",
+      "height": 500,
+      "width": 720
+    },
+    "series": [
+      {
+        "name": "Revenue",
+        "data": [
+          42,
+          38,
+          51,
+          47,
+          55,
+          61,
+          58,
+          66,
+          72,
+          69,
+          78,
+          84
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
+    },
+    "plotOptions": {
+      "radialColumn": {
+        "fill": {
+          "type": "value",
+          "stops": [
+            "#3b82f6",
+            "#8b5cf6",
+            "#d946ef"
+          ]
+        },
+        "layers": [
+          {
+            "type": "sunburst",
+            "name": "By quarter",
+            "data": [
+              {
+                "x": "Q1",
+                "children": [
+                  {
+                    "x": "Jan",
+                    "y": 42
+                  },
+                  {
+                    "x": "Feb",
+                    "y": 38
+                  },
+                  {
+                    "x": "Mar",
+                    "y": 51
+                  }
+                ]
+              },
+              {
+                "x": "Q2",
+                "children": [
+                  {
+                    "x": "Apr",
+                    "y": 47
+                  },
+                  {
+                    "x": "May",
+                    "y": 55
+                  },
+                  {
+                    "x": "Jun",
+                    "y": 61
+                  }
+                ]
+              },
+              {
+                "x": "Q3",
+                "children": [
+                  {
+                    "x": "Jul",
+                    "y": 58
+                  },
+                  {
+                    "x": "Aug",
+                    "y": 66
+                  },
+                  {
+                    "x": "Sep",
+                    "y": 72
+                  }
+                ]
+              },
+              {
+                "x": "Q4",
+                "children": [
+                  {
+                    "x": "Oct",
+                    "y": 69
+                  },
+                  {
+                    "x": "Nov",
+                    "y": 78
+                  },
+                  {
+                    "x": "Dec",
+                    "y": 84
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

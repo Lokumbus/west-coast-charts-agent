@@ -1,0 +1,51 @@
+{
+  "title": "Quarterly results (grouped columns)",
+  "description": "Two series side by side per quarter.",
+  "tags": [
+    "core",
+    "comparison"
+  ],
+  "spec": {
+    "chart": {
+      "type": "bar",
+      "width": 640,
+      "height": 360
+    },
+    "series": [
+      {
+        "name": "2025",
+        "data": [
+          44,
+          55,
+          57,
+          56
+        ]
+      },
+      {
+        "name": "2026",
+        "data": [
+          51,
+          61,
+          63,
+          70
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ]
+    },
+    "yaxis": {
+      "title": {
+        "text": "EUR m"
+      }
+    },
+    "title": {
+      "text": "Quarterly revenue"
+    }
+  }
+}

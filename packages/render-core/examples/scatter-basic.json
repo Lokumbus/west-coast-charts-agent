@@ -1,0 +1,86 @@
+{
+  "title": "Latency vs. load (scatter)",
+  "description": "Two clusters of points.",
+  "tags": [
+    "core",
+    "correlation"
+  ],
+  "spec": {
+    "chart": {
+      "type": "scatter",
+      "width": 640,
+      "height": 360
+    },
+    "series": [
+      {
+        "name": "eu-west",
+        "data": [
+          [
+            10,
+            120
+          ],
+          [
+            20,
+            135
+          ],
+          [
+            30,
+            160
+          ],
+          [
+            40,
+            190
+          ],
+          [
+            50,
+            240
+          ],
+          [
+            60,
+            310
+          ]
+        ]
+      },
+      {
+        "name": "us-east",
+        "data": [
+          [
+            10,
+            90
+          ],
+          [
+            20,
+            98
+          ],
+          [
+            30,
+            115
+          ],
+          [
+            40,
+            130
+          ],
+          [
+            50,
+            170
+          ],
+          [
+            60,
+            205
+          ]
+        ]
+      }
+    ],
+    "xaxis": {
+      "type": "numeric",
+      "title": {
+        "text": "Requests/s (k)"
+      }
+    },
+    "yaxis": {
+      "title": {
+        "text": "p95 latency (ms)"
+      }
+    }
+  }
+}

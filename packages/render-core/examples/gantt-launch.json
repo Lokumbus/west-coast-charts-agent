@@ -1,0 +1,204 @@
+{
+  "title": "Product launch plan (gantt, premium)",
+  "description": "Gantt with critical path, baselines and today line (samples/wcc/premium/gantt.html).",
+  "tags": [
+    "premium",
+    "coverage"
+  ],
+  "spec": {
+    "chart": {
+      "type": "gantt",
+      "width": 720,
+      "height": 460
+    },
+    "series": [
+      {
+        "name": "Discovery",
+        "data": [
+          {
+            "id": "res",
+            "x": "User research",
+            "y": [
+              1788739200000,
+              1789689600000
+            ],
+            "progress": 100,
+            "assignee": "Mara",
+            "baseline": [
+              1788739200000,
+              1789516800000
+            ]
+          },
+          {
+            "id": "req",
+            "x": "Requirements",
+            "y": [
+              1789516800000,
+              1790294400000
+            ],
+            "progress": 100,
+            "dependsOn": [
+              "res"
+            ],
+            "assignee": "Jon",
+            "baseline": [
+              1789344000000,
+              1790121600000
+            ]
+          },
+          {
+            "id": "sign",
+            "x": "Scope sign-off",
+            "y": 1790553600000,
+            "milestone": true,
+            "dependsOn": [
+              "req"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Design",
+        "data": [
+          {
+            "id": "ux",
+            "x": "UX flows",
+            "y": [
+              1790553600000,
+              1791504000000
+            ],
+            "progress": 100,
+            "dependsOn": [
+              "sign"
+            ],
+            "assignee": "Mara",
+            "baseline": [
+              1790553600000,
+              1791331200000
+            ]
+          },
+          {
+            "id": "ui",
+            "x": "Visual design",
+            "y": [
+              1791158400000,
+              1792540800000
+            ],
+            "progress": 85,
+            "dependsOn": [
+              "ux"
+            ],
+            "assignee": "Ines",
+            "baseline": [
+              1790812800000,
+              1792022400000
+            ]
+          },
+          {
+            "id": "ds",
+            "x": "Design system",
+            "y": [
+              1790812800000,
+              1792108800000
+            ],
+            "progress": 70,
+            "dependsOn": [
+              "sign"
+            ],
+            "assignee": "Ines"
+          }
+        ]
+      },
+      {
+        "name": "Build",
+        "data": [
+          {
+            "id": "api",
+            "x": "API & data model",
+            "y": [
+              1791158400000,
+              1793318400000
+            ],
+            "progress": 55,
+            "dependsOn": [
+              "sign"
+            ],
+            "assignee": "Theo",
+            "baseline": [
+              1790812800000,
+              1792972800000
+            ]
+          },
+          {
+            "id": "fe",
+            "x": "Frontend",
+            "y": [
+              1792368000000,
+              1794528000000
+            ],
+            "progress": 20,
+            "dependsOn": [
+              "ui",
+              "ds"
+            ],
+            "assignee": "Lena"
+          },
+          {
+            "id": "int",
+            "x": "Integrations",
+            "y": [
+              1793577600000,
+              1794528000000
+            ],
+            "progress": 0,
+            "dependsOn": [
+              "api"
+            ],
+            "assignee": "Theo"
+          },
+          {
+            "id": "qa",
+            "x": "QA & hardening",
+            "y": [
+              1794787200000,
+              1795737600000
+            ],
+            "progress": 0,
+            "dependsOn": [
+              "fe",
+              "int"
+            ],
+            "assignee": "Sam"
+          },
+          {
+            "id": "go",
+            "x": "Launch",
+            "y": 1795996800000,
+            "milestone": true,
+            "dependsOn": [
+              "qa"
+            ]
+          }
+        ]
+      }
+    ],
+    "plotOptions": {
+      "gantt": {
+        "criticalPath": {
+          "show": true
+        },
+        "today": {
+          "date": "2026-10-22"
+        },
+        "grid": {
+          "width": 300,
+          "columns": [
+            "name",
+            "assignee",
+            "duration"
+          ]
+        }
+      }
+    }
+  }
+}

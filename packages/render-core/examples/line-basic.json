@@ -1,0 +1,15 @@
+{
+  "title": "Monthly active users (line)",
+  "description": "Two series over twelve months with axis titles.",
+  "tags": ["core", "time"],
+  "spec": {
+    "chart": { "type": "line", "width": 720, "height": 360 },
+    "title": { "text": "Monthly active users" },
+    "series": [
+      { "name": "Web", "data": [1200, 1350, 1490, 1610, 1580, 1720, 1880, 1950, 2100, 2240, 2310, 2450] },
+      { "name": "Mobile", "data": [800, 920, 1100, 1260, 1400, 1530, 1700, 1820, 1990, 2150, 2380, 2600] }
+    ],
+    "xaxis": { "categories": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "title": { "text": "Month" } },
+    "yaxis": { "title": { "text": "Users" } }
+  }
+}

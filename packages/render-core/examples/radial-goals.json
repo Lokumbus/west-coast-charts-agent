@@ -1,0 +1,278 @@
+{
+  "title": "Team goals: seven rings inside a month of output (radialColumn, premium)",
+  "description": "radialColumn showcase \"goals-team\" (samples/wcc/premium/radial-column.showcase.js); inner layers: goals.",
+  "tags": [
+    "premium",
+    "coverage"
+  ],
+  "spec": {
+    "chart": {
+      "type": "radialColumn",
+      "height": 600,
+      "width": 720
+    },
+    "series": [
+      {
+        "name": "Items shipped",
+        "data": [
+          46,
+          61,
+          68,
+          53,
+          45,
+          13,
+          9,
+          52,
+          67,
+          63,
+          59,
+          40,
+          8,
+          15,
+          47,
+          62,
+          69,
+          54,
+          45,
+          14,
+          10,
+          54,
+          57,
+          63,
+          59,
+          40,
+          9,
+          17,
+          49,
+          64
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "Oct 1",
+        "Oct 2",
+        "Oct 3",
+        "Oct 4",
+        "Oct 5",
+        "Oct 6",
+        "Oct 7",
+        "Oct 8",
+        "Oct 9",
+        "Oct 10",
+        "Oct 11",
+        "Oct 12",
+        "Oct 13",
+        "Oct 14",
+        "Oct 15",
+        "Oct 16",
+        "Oct 17",
+        "Oct 18",
+        "Oct 19",
+        "Oct 20",
+        "Oct 21",
+        "Oct 22",
+        "Oct 23",
+        "Oct 24",
+        "Oct 25",
+        "Oct 26",
+        "Oct 27",
+        "Oct 28",
+        "Oct 29",
+        "Oct 30"
+      ]
+    },
+    "colors": [
+      "#94a3b8"
+    ],
+    "plotOptions": {
+      "radialColumn": {
+        "innerRadius": 0.64,
+        "center": {
+          "show": false
+        },
+        "categoryLabels": {
+          "step": 1,
+          "orientation": "horizontal"
+        },
+        "link": {
+          "mode": "map",
+          "unit": "days"
+        },
+        "layers": [
+          {
+            "type": "goals",
+            "name": "Monthly goal",
+            "data": [
+              {
+                "x": "Design",
+                "y": 82,
+                "target": 100,
+                "color": "#f472b6",
+                "link": [
+                  0,
+                  1,
+                  4,
+                  7,
+                  10,
+                  11,
+                  14,
+                  17,
+                  20,
+                  21,
+                  24,
+                  27
+                ],
+                "label": "Design"
+              },
+              {
+                "x": "Frontend",
+                "y": 118,
+                "target": 100,
+                "color": "#38bdf8",
+                "link": [
+                  2,
+                  4,
+                  7,
+                  9,
+                  12,
+                  14,
+                  17,
+                  19,
+                  22,
+                  24,
+                  27,
+                  29
+                ],
+                "label": "Frontend"
+              },
+              {
+                "x": "Backend",
+                "y": 91,
+                "target": 100,
+                "color": "#818cf8",
+                "link": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  18,
+                  20,
+                  22,
+                  24,
+                  26,
+                  28
+                ],
+                "label": "Backend"
+              },
+              {
+                "x": "QA",
+                "y": 142,
+                "target": 100,
+                "color": "#34d399",
+                "link": [
+                  0,
+                  1,
+                  3,
+                  5,
+                  6,
+                  8,
+                  10,
+                  11,
+                  13,
+                  15,
+                  16,
+                  18,
+                  20,
+                  21,
+                  23,
+                  25,
+                  26,
+                  28
+                ],
+                "label": "QA"
+              },
+              {
+                "x": "Docs",
+                "y": 47,
+                "target": 100,
+                "color": "#fbbf24",
+                "link": [
+                  0,
+                  3,
+                  10,
+                  13,
+                  20,
+                  23
+                ],
+                "label": "Docs"
+              },
+              {
+                "x": "Support",
+                "y": 76,
+                "target": 100,
+                "color": "#fb923c",
+                "link": [
+                  1,
+                  2,
+                  6,
+                  7,
+                  11,
+                  12,
+                  16,
+                  17,
+                  21,
+                  22,
+                  26,
+                  27
+                ],
+                "label": "Support"
+              },
+              {
+                "x": "Sales",
+                "y": 212,
+                "target": 100,
+                "color": "#a78bfa",
+                "link": [
+                  0,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29
+                ],
+                "label": "Sales"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

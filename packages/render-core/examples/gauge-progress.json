@@ -1,0 +1,21 @@
+{
+  "title": "Progress (gauge)",
+  "description": "A single gauge value.",
+  "tags": [
+    "types",
+    "kpi"
+  ],
+  "spec": {
+    "chart": {
+      "type": "gauge",
+      "width": 360,
+      "height": 300
+    },
+    "series": [
+      72
+    ],
+    "labels": [
+      "Progress"
+    ]
+  }
+}

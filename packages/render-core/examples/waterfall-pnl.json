@@ -1,0 +1,45 @@
+{
+  "title": "P&L bridge (waterfall)",
+  "description": "Revenue to EBIT with subtotal and total.",
+  "tags": [
+    "types",
+    "finance"
+  ],
+  "spec": {
+    "chart": {
+      "type": "waterfall",
+      "width": 640,
+      "height": 360
+    },
+    "series": [
+      {
+        "name": "EUR",
+        "data": [
+          {
+            "x": "Revenue",
+            "y": 8786
+          },
+          {
+            "x": "COGS",
+            "y": -2786
+          },
+          {
+            "x": "Gross profit",
+            "isSubtotal": true
+          },
+          {
+            "x": "OpEx",
+            "y": -1786
+          },
+          {
+            "x": "EBIT",
+            "isTotal": true
+          }
+        ]
+      }
+    ],
+    "title": {
+      "text": "P&L bridge (EUR k)"
+    }
+  }
+}

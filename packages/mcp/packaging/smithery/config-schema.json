@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "licenseKey": {
+      "x-from": {
+        "header": "x-wcc-license-key"
+      },
+      "description": "West Coast Charts Premium licence key. Needed only for premium chart types (sankey, chord, radialColumn, ...). Free types work without it.",
+      "type": "string"
+    },
+    "defaultTheme": {
+      "default": "light",
+      "description": "Theme used when a spec sets no theme.mode.",
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    },
+    "maxPixels": {
+      "default": 16777216,
+      "description": "Upper bound for width*height*scale^2 of one render (protects shared servers).",
+      "type": "integer",
+      "minimum": 10000,
+      "maximum": 67108864
+    },
+    "evaluation": {
+      "default": false,
+      "description": "Without a licence key, render premium types with an \"unlicensed\" watermark (opt-in preview) instead of failing with kind \"license\".",
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Team profile (radar)",
+  "description": "Two teams on six axes.",
+  "tags": [
+    "core",
+    "comparison"
+  ],
+  "spec": {
+    "chart": {
+      "type": "radar",
+      "width": 520,
+      "height": 420
+    },
+    "series": [
+      {
+        "name": "Team A",
+        "data": [
+          80,
+          50,
+          30,
+          40,
+          100,
+          20
+        ]
+      },
+      {
+        "name": "Team B",
+        "data": [
+          20,
+          30,
+          40,
+          80,
+          20,
+          80
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "Frontend",
+        "Backend",
+        "Data",
+        "Infra",
+        "Design",
+        "Security"
+      ]
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://westcoastcharts.dev/schema/wcc-describe.schema.json",
+  "title": "West Coast Charts chart.describe() result (format 'json')",
+  "description": "What a rendered chart drew: series, marks, aggregates, scale domains, extrema, units, active filters and hidden series. Same text and table as the chart's accessible description and data table.",
+  "type": "object",
+  "required": ["schema", "type", "premium", "title", "text", "deterministic", "noData", "series", "marks", "marksTotal", "marksTruncated", "aggregate", "scales", "extrema", "units", "filters", "hidden", "table"],
+  "additionalProperties": false,
+  "definitions": {
+    "num": { "type": ["number", "null"] },
+    "point": {
+      "type": ["object", "null"],
+      "required": ["value", "category"],
+      "properties": { "value": { "type": "number" }, "category": { "type": ["string", "null"] } },
+      "additionalProperties": false
+    },
+    "extremum": {
+      "type": "object",
+      "required": ["value", "series", "category"],
+      "properties": { "value": { "type": "number" }, "series": { "type": "string" }, "category": { "type": ["string", "null"] } },
+      "additionalProperties": false
+    },
+    "mode": { "enum": ["sum", "mean", "max", "min", "none"] },
+    "seriesAggregate": {
+      "type": ["object", "null"],
+      "required": ["mode", "value", "label"],
+      "properties": { "mode": { "$ref": "#/definitions/mode" }, "value": { "$ref": "#/definitions/num" }, "label": { "type": "string" } },
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "schema": { "const": "wcc-describe/1" },
+    "type": { "type": "string", "description": "chart type as configured (premium: the premium type, e.g. radialColumn)" },
+    "premium": { "type": "boolean" },
+    "title": { "type": ["string", "null"] },
+    "subtitle": { "type": ["string", "null"] },
+    "text": { "type": "string", "description": "the accessible description (<desc>) without the keyboard hint" },
+    "deterministic": { "type": "boolean" },
+    "noData": { "type": "boolean" },
+    "series": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["index", "name", "hidden", "count", "unit", "min", "max", "aggregate"],
+        "properties": {
+          "index": { "type": "integer", "minimum": 0 },
+          "name": { "type": "string" },
+          "hidden": { "type": "boolean", "description": "collapsed via the legend / hideSeries()" },
+          "count": { "type": "integer", "minimum": 0 },
+          "unit": { "type": ["string", "null"] },
+          "min": { "$ref": "#/definitions/point" },
+          "max": { "$ref": "#/definitions/point" },
+          "aggregate": { "$ref": "#/definitions/seriesAggregate" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "marks": {
+      "type": "array",
+      "description": "drawn values of the visible series, first maxRows rows per series",
+      "items": {
+        "type": "object",
+        "required": ["series", "seriesIndex", "category", "value", "formatted"],
+        "properties": {
+          "series": { "type": "string" },
+          "seriesIndex": { "type": "integer", "minimum": 0 },
+          "category": { "type": "string" },
+          "value": { "$ref": "#/definitions/num" },
+          "formatted": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "marksTotal": { "type": "integer", "minimum": 0 },
+    "marksTruncated": { "type": "boolean" },
+    "aggregate": {
+      "type": ["object", "null"],
+      "description": "chart-level combined value the chart shows (radialColumn centre honouring plotOptions.radialColumn.aggregate, pie total, radialBar total)",
+      "required": ["mode", "value", "label", "formatted"],
+      "properties": {
+        "mode": { "$ref": "#/definitions/mode" },
+        "value": { "$ref": "#/definitions/num" },
+        "label": { "type": "string" },
+        "formatted": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "categories": {
+      "type": "array",
+      "description": "radialColumn: per category the value tooltips and centre use (stacked sum or the aggregate across series)",
+      "items": {
+        "type": "object",
+        "required": ["category", "value"],
+        "properties": { "category": { "type": "string" }, "value": { "$ref": "#/definitions/num" } },
+        "additionalProperties": false
+      }
+    },
+    "scales": {
+      "type": ["object", "null"],
+      "required": ["x", "y"],
+      "properties": {
+        "x": {
+          "type": ["object", "null"],
+          "required": ["type", "min", "max", "title"],
+          "properties": {
+            "type": { "enum": ["category", "datetime", "numeric"] },
+            "min": { "$ref": "#/definitions/num" },
+            "max": { "$ref": "#/definitions/num" },
+            "minISO": { "type": ["string", "null"] },
+            "maxISO": { "type": ["string", "null"] },
+            "count": { "type": "integer", "minimum": 0 },
+            "first": { "type": ["string", "null"] },
+            "last": { "type": ["string", "null"] },
+            "title": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        },
+        "y": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["index", "min", "max", "title", "logarithmic", "series"],
+            "properties": {
+              "index": { "type": "integer", "minimum": 0 },
+              "min": { "$ref": "#/definitions/num" },
+              "max": { "$ref": "#/definitions/num" },
+              "title": { "type": ["string", "null"] },
+              "logarithmic": { "type": "boolean" },
+              "series": { "type": "array", "items": { "type": "string" } }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "extrema": {
+      "type": ["object", "null"],
+      "required": ["min", "max"],
+      "properties": { "min": { "$ref": "#/definitions/extremum" }, "max": { "$ref": "#/definitions/extremum" } },
+      "additionalProperties": false
+    },
+    "units": {
+      "type": "object",
+      "required": ["category", "value"],
+      "properties": {
+        "category": { "type": ["string", "null"], "description": "radialColumn link.unit" },
+        "value": { "type": ["string", "null"], "description": "axis charts: the first y-axis title" }
+      },
+      "additionalProperties": false
+    },
+    "filters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "active"],
+        "properties": {
+          "kind": { "enum": ["highlight", "crossfilter", "radialColumn", "zoom"] },
+          "active": { "const": true },
+          "group": { "type": ["string", "null"] },
+          "selection": {},
+          "path": { "type": "array", "items": { "type": "string" } },
+          "shown": { "$ref": "#/definitions/num" },
+          "unfiltered": { "$ref": "#/definitions/num" },
+          "min": { "$ref": "#/definitions/num" },
+          "max": { "$ref": "#/definitions/num" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "hidden": { "type": "array", "items": { "type": "string" } },
+    "table": {
+      "type": "object",
+      "required": ["caption", "columns", "rows", "total", "truncated"],
+      "properties": {
+        "caption": { "type": "string" },
+        "columns": { "type": "array", "items": { "type": "string" } },
+        "rows": { "type": "array", "items": { "type": "array", "items": { "type": "string" } } },
+        "total": { "type": "integer", "minimum": 0 },
+        "truncated": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

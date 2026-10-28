@@ -1,0 +1,31 @@
+{
+  "name": "@wcc-agent/render-core",
+  "private": true,
+  "version": "0.2.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "jsdom": "^26.1.0",
+    "opentype.js": "^2.0.0"
+  },
+  "files": [
+    "src/",
+    "fonts/*.ttf",
+    "fonts/*.txt",
+    "fonts/*.json",
+    "fonts/FONTS.md",
+    "examples/"
+  ],
+  "peerDependencies": {
+    "west-coast-charts": "^1.1.1-rc.7"
+  },
+  "peerDependenciesMeta": {
+    "west-coast-charts": {
+      "optional": true
+    }
+  }
+}

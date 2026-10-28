@@ -1,0 +1,355 @@
+{
+  "title": "Customers per 100k (map, premium)",
+  "description": "World choropleth, Equal Earth (samples/wcc/premium/map.html).",
+  "tags": [
+    "premium",
+    "coverage"
+  ],
+  "spec": {
+    "chart": {
+      "type": "map",
+      "width": 720,
+      "height": 470
+    },
+    "series": [
+      {
+        "name": "Customers / 100k",
+        "data": [
+          {
+            "id": "DEU",
+            "value": 34.1
+          },
+          {
+            "id": "FRA",
+            "value": 59
+          },
+          {
+            "id": "GBR",
+            "value": 51.5
+          },
+          {
+            "id": "ITA",
+            "value": 36.6
+          },
+          {
+            "id": "ESP",
+            "value": 82.1
+          },
+          {
+            "id": "NLD",
+            "value": 56.9
+          },
+          {
+            "id": "BEL",
+            "value": 63
+          },
+          {
+            "id": "CHE",
+            "value": 60.2
+          },
+          {
+            "id": "AUT",
+            "value": 60.5
+          },
+          {
+            "id": "POL",
+            "value": 49.8
+          },
+          {
+            "id": "SWE",
+            "value": 46.3
+          },
+          {
+            "id": "NOR",
+            "value": 73.9
+          },
+          {
+            "id": "DNK",
+            "value": 41.9
+          },
+          {
+            "id": "FIN",
+            "value": 55.3
+          },
+          {
+            "id": "IRL",
+            "value": 66.9
+          },
+          {
+            "id": "PRT",
+            "value": 80.2
+          },
+          {
+            "id": "CZE",
+            "value": 55.5
+          },
+          {
+            "id": "HUN",
+            "value": 38.8
+          },
+          {
+            "id": "ROU",
+            "value": 46.2
+          },
+          {
+            "id": "GRC",
+            "value": 75.1
+          },
+          {
+            "id": "SVK",
+            "value": 67.2
+          },
+          {
+            "id": "BGR",
+            "value": 65
+          },
+          {
+            "id": "HRV",
+            "value": 60.8
+          },
+          {
+            "id": "SRB",
+            "value": 47.2
+          },
+          {
+            "id": "SVN",
+            "value": 51.3
+          },
+          {
+            "id": "LTU",
+            "value": 78.5
+          },
+          {
+            "id": "LVA",
+            "value": 34.7
+          },
+          {
+            "id": "EST",
+            "value": 44.9
+          },
+          {
+            "id": "UKR",
+            "value": 66.2
+          },
+          {
+            "id": "BLR",
+            "value": 73.9
+          },
+          {
+            "id": "ISL",
+            "value": 34.9
+          },
+          {
+            "id": "USA",
+            "value": 62.7
+          },
+          {
+            "id": "CAN",
+            "value": 94.4
+          },
+          {
+            "id": "MEX",
+            "value": 71.4
+          },
+          {
+            "id": "GTM",
+            "value": 44.6
+          },
+          {
+            "id": "CRI",
+            "value": 77
+          },
+          {
+            "id": "PAN",
+            "value": 98.9
+          },
+          {
+            "id": "CUB",
+            "value": 58.7
+          },
+          {
+            "id": "DOM",
+            "value": 95.3
+          },
+          {
+            "id": "BRA",
+            "value": 14.7
+          },
+          {
+            "id": "ARG",
+            "value": 31.1
+          },
+          {
+            "id": "CHL",
+            "value": 33.2
+          },
+          {
+            "id": "COL",
+            "value": 36.5
+          },
+          {
+            "id": "PER",
+            "value": 21
+          },
+          {
+            "id": "URY",
+            "value": 18.2
+          },
+          {
+            "id": "ECU",
+            "value": 33
+          },
+          {
+            "id": "VEN",
+            "value": 36.5
+          },
+          {
+            "id": "BOL",
+            "value": 31.4
+          },
+          {
+            "id": "PRY",
+            "value": 37.7
+          },
+          {
+            "id": "JPN",
+            "value": 38.1
+          },
+          {
+            "id": "KOR",
+            "value": 28.1
+          },
+          {
+            "id": "CHN",
+            "value": 23.4
+          },
+          {
+            "id": "IND",
+            "value": 33.1
+          },
+          {
+            "id": "IDN",
+            "value": 17.1
+          },
+          {
+            "id": "SGP",
+            "value": 42.2
+          },
+          {
+            "id": "MYS",
+            "value": 39
+          },
+          {
+            "id": "THA",
+            "value": 26
+          },
+          {
+            "id": "VNM",
+            "value": 40.1
+          },
+          {
+            "id": "PHL",
+            "value": 16.5
+          },
+          {
+            "id": "ISR",
+            "value": 34.5
+          },
+          {
+            "id": "ARE",
+            "value": 42.2
+          },
+          {
+            "id": "SAU",
+            "value": 31.3
+          },
+          {
+            "id": "TUR",
+            "value": 34.8
+          },
+          {
+            "id": "KAZ",
+            "value": 30.3
+          },
+          {
+            "id": "PAK",
+            "value": 39.5
+          },
+          {
+            "id": "BGD",
+            "value": 28.2
+          },
+          {
+            "id": "LKA",
+            "value": 41.5
+          },
+          {
+            "id": "TWN",
+            "value": 43.4
+          },
+          {
+            "id": "AUS",
+            "value": 51.3
+          },
+          {
+            "id": "NZL",
+            "value": 70.4
+          },
+          {
+            "id": "ZAF",
+            "value": 9.1
+          },
+          {
+            "id": "NGA",
+            "value": 6.8
+          },
+          {
+            "id": "EGY",
+            "value": 5.3
+          },
+          {
+            "id": "KEN",
+            "value": 5.4
+          },
+          {
+            "id": "MAR",
+            "value": 11.7
+          },
+          {
+            "id": "GHA",
+            "value": 5.8
+          },
+          {
+            "id": "ETH",
+            "value": 7.8
+          },
+          {
+            "id": "TZA",
+            "value": 9.4
+          },
+          {
+            "id": "DZA",
+            "value": 8
+          },
+          {
+            "id": "TUN",
+            "value": 8.8
+          },
+          {
+            "id": "SEN",
+            "value": 5.8
+          },
+          {
+            "id": "CIV",
+            "value": 8
+          }
+        ]
+      }
+    ],
+    "plotOptions": {
+      "map": {
+        "map": "world"
+      }
+    }
+  }
+}

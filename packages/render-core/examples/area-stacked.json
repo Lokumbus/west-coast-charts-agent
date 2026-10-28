@@ -1,0 +1,71 @@
+{
+  "title": "Traffic by channel (stacked area)",
+  "description": "Stacked area of three channels.",
+  "tags": [
+    "core",
+    "time"
+  ],
+  "spec": {
+    "chart": {
+      "type": "area",
+      "stacked": true,
+      "width": 720,
+      "height": 360
+    },
+    "series": [
+      {
+        "name": "Search",
+        "data": [
+          31,
+          40,
+          28,
+          51,
+          42,
+          60,
+          58
+        ]
+      },
+      {
+        "name": "Social",
+        "data": [
+          11,
+          32,
+          45,
+          32,
+          34,
+          52,
+          41
+        ]
+      },
+      {
+        "name": "Email",
+        "data": [
+          8,
+          12,
+          10,
+          18,
+          15,
+          20,
+          24
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    },
+    "dataLabels": {
+      "enabled": false
+    },
+    "title": {
+      "text": "Sessions by channel (k)"
+    }
+  }
+}

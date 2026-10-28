@@ -1,0 +1,47 @@
+{
+  "title": "Revenue by region (horizontal bar)",
+  "description": "Sorted horizontal bars with data labels.",
+  "tags": [
+    "core",
+    "ranking"
+  ],
+  "spec": {
+    "chart": {
+      "type": "bar",
+      "width": 640,
+      "height": 360
+    },
+    "plotOptions": {
+      "bar": {
+        "horizontal": true
+      }
+    },
+    "series": [
+      {
+        "name": "Revenue (EUR k)",
+        "data": [
+          540,
+          470,
+          410,
+          330,
+          210
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "DACH",
+        "Nordics",
+        "Benelux",
+        "France",
+        "Iberia"
+      ]
+    },
+    "dataLabels": {
+      "enabled": true
+    },
+    "title": {
+      "text": "Revenue by region"
+    }
+  }
+}

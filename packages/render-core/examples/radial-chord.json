@@ -1,0 +1,328 @@
+{
+  "title": "Ticket handoffs between teams, agents around (radialColumn, premium)",
+  "description": "radialColumn showcase \"chord-handoffs\" (samples/wcc/premium/radial-column.showcase.js); inner layers: chord.",
+  "tags": [
+    "premium",
+    "coverage"
+  ],
+  "spec": {
+    "chart": {
+      "type": "radialColumn",
+      "height": 580,
+      "width": 720
+    },
+    "series": [
+      {
+        "name": "Closed tickets",
+        "data": [
+          {
+            "x": "Ana",
+            "y": 55,
+            "fillColor": "#60a5fa",
+            "meta": {
+              "wow": 0
+            }
+          },
+          {
+            "x": "Ben",
+            "y": 40,
+            "fillColor": "#60a5fa",
+            "meta": {
+              "wow": -5
+            }
+          },
+          {
+            "x": "Chloé",
+            "y": 37,
+            "fillColor": "#60a5fa",
+            "meta": {
+              "wow": -2
+            }
+          },
+          {
+            "x": "Dev",
+            "y": 40,
+            "fillColor": "#2dd4bf",
+            "meta": {
+              "wow": 0
+            }
+          },
+          {
+            "x": "Emil",
+            "y": 43,
+            "fillColor": "#2dd4bf",
+            "meta": {
+              "wow": 17
+            }
+          },
+          {
+            "x": "Farah",
+            "y": 25,
+            "fillColor": "#2dd4bf",
+            "meta": {
+              "wow": 15
+            }
+          },
+          {
+            "x": "Gus",
+            "y": 33,
+            "fillColor": "#fbbf24",
+            "meta": {
+              "wow": 0
+            }
+          },
+          {
+            "x": "Hana",
+            "y": 26,
+            "fillColor": "#fbbf24",
+            "meta": {
+              "wow": -12
+            }
+          },
+          {
+            "x": "Ivo",
+            "y": 48,
+            "fillColor": "#fbbf24",
+            "meta": {
+              "wow": -6
+            }
+          },
+          {
+            "x": "Jules",
+            "y": 47,
+            "fillColor": "#f87171",
+            "meta": {
+              "wow": -9
+            }
+          },
+          {
+            "x": "Kemal",
+            "y": 34,
+            "fillColor": "#f87171",
+            "meta": {
+              "wow": 7
+            }
+          },
+          {
+            "x": "Lea",
+            "y": 26,
+            "fillColor": "#f87171",
+            "meta": {
+              "wow": 19
+            }
+          },
+          {
+            "x": "Mats",
+            "y": 54,
+            "fillColor": "#a78bfa",
+            "meta": {
+              "wow": 18
+            }
+          },
+          {
+            "x": "Nia",
+            "y": 45,
+            "fillColor": "#a78bfa",
+            "meta": {
+              "wow": 18
+            }
+          },
+          {
+            "x": "Oskar",
+            "y": 42,
+            "fillColor": "#a78bfa",
+            "meta": {
+              "wow": -4
+            }
+          },
+          {
+            "x": "Priya",
+            "y": 31,
+            "fillColor": "#f472b6",
+            "meta": {
+              "wow": -5
+            }
+          },
+          {
+            "x": "Quinn",
+            "y": 24,
+            "fillColor": "#f472b6",
+            "meta": {
+              "wow": -14
+            }
+          },
+          {
+            "x": "Rosa",
+            "y": 38,
+            "fillColor": "#f472b6",
+            "meta": {
+              "wow": -6
+            }
+          }
+        ]
+      }
+    ],
+    "plotOptions": {
+      "radialColumn": {
+        "innerRadius": 0.7,
+        "center": {
+          "label": "Tickets closed"
+        },
+        "encode": {
+          "angle": "Agent",
+          "delta": {
+            "field": "wow",
+            "name": "vs last week",
+            "unit": "%",
+            "style": "band"
+          }
+        },
+        "link": {
+          "mode": "map",
+          "align": true,
+          "unit": "agents"
+        },
+        "layers": [
+          {
+            "type": "chord",
+            "name": "Handoffs",
+            "data": [
+              [
+                "Billing",
+                "Payments",
+                18
+              ],
+              [
+                "Payments",
+                "Billing",
+                11
+              ],
+              [
+                "Onboarding",
+                "Platform",
+                14
+              ],
+              [
+                "Platform",
+                "Onboarding",
+                4
+              ],
+              [
+                "Mobile",
+                "Platform",
+                21
+              ],
+              [
+                "Platform",
+                "Mobile",
+                9
+              ],
+              [
+                "Billing",
+                "Trust & Safety",
+                6
+              ],
+              [
+                "Trust & Safety",
+                "Payments",
+                12
+              ],
+              [
+                "Payments",
+                "Platform",
+                7
+              ],
+              [
+                "Onboarding",
+                "Billing",
+                10
+              ],
+              [
+                "Mobile",
+                "Onboarding",
+                5
+              ],
+              [
+                "Trust & Safety",
+                "Mobile",
+                3
+              ],
+              [
+                "Platform",
+                "Payments",
+                8
+              ],
+              [
+                "Billing",
+                "Onboarding",
+                4
+              ]
+            ],
+            "groups": [
+              {
+                "id": "Billing",
+                "color": "#60a5fa",
+                "link": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              {
+                "id": "Onboarding",
+                "color": "#2dd4bf",
+                "link": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "id": "Platform",
+                "color": "#fbbf24",
+                "link": [
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "id": "Mobile",
+                "color": "#f87171",
+                "link": [
+                  9,
+                  10,
+                  11
+                ]
+              },
+              {
+                "id": "Payments",
+                "color": "#a78bfa",
+                "link": [
+                  12,
+                  13,
+                  14
+                ]
+              },
+              {
+                "id": "Trust & Safety",
+                "color": "#f472b6",
+                "link": [
+                  15,
+                  16,
+                  17
+                ]
+              }
+            ],
+            "ringWidth": 12,
+            "padding": 3,
+            "ribbon": {
+              "colorMode": "gradient",
+              "opacity": 0.66
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Signup funnel (funnel)",
+  "description": "Conversion stages.",
+  "tags": [
+    "types",
+    "flow"
+  ],
+  "spec": {
+    "chart": {
+      "type": "funnel",
+      "width": 560,
+      "height": 320
+    },
+    "series": [
+      {
+        "name": "Users",
+        "data": [
+          12000,
+          7400,
+          3900,
+          1800,
+          640
+        ]
+      }
+    ],
+    "xaxis": {
+      "categories": [
+        "Visited",
+        "Signed up",
+        "Activated",
+        "Trial",
+        "Paid"
+      ]
+    },
+    "dataLabels": {
+      "enabled": true
+    },
+    "legend": {
+      "show": false
+    }
+  }
+}

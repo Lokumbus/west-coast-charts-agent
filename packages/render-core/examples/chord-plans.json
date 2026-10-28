@@ -1,0 +1,52 @@
+{
+  "title": "Plan migrations (chord, premium)",
+  "description": "Matrix of moves between plans.",
+  "tags": [
+    "premium",
+    "flow"
+  ],
+  "spec": {
+    "chart": {
+      "type": "chord",
+      "width": 520,
+      "height": 480
+    },
+    "series": [],
+    "plotOptions": {
+      "chord": {
+        "labels": [
+          "Starter",
+          "Team",
+          "Business",
+          "Enterprise"
+        ],
+        "matrix": [
+          [
+            0,
+            420,
+            90,
+            12
+          ],
+          [
+            60,
+            0,
+            280,
+            70
+          ],
+          [
+            10,
+            45,
+            0,
+            160
+          ],
+          [
+            2,
+            8,
+            30,
+            0
+          ]
+        ]
+      }
+    }
+  }
+}

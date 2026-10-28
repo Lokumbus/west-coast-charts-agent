@@ -1,0 +1,131 @@
+{
+  "manifest_version": "0.3",
+  "name": "west-coast-charts",
+  "display_name": "West Coast Charts",
+  "version": "0.2.0",
+  "description": "Render, validate and describe charts headlessly: SVG/PNG plus a verification table for agents.",
+  "long_description": "Official West Coast Charts MCP server: render, validate and describe charts headlessly (SVG/PNG + verification table), option schema slices and curated examples for AI agents.\n\nAll tools are read-only and deterministic; nothing is written to disk and no network is used. Premium chart types need a licence key.",
+  "author": {
+    "name": "West Coast Software",
+    "url": "https://westcoast-charts.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lokumbus/west-coast-charts-agent.git"
+  },
+  "homepage": "https://westcoast-charts.com",
+  "documentation": "https://westcoast-charts.com/agents/",
+  "support": "https://github.com/Lokumbus/west-coast-charts-agent/issues",
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/bin/wcc-mcp.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/bin/wcc-mcp.js"
+      ],
+      "env": {
+        "WCC_LICENSE_KEY": "${user_config.license_key}",
+        "WCC_DEFAULT_THEME": "${user_config.default_theme}",
+        "WCC_EVALUATION": "${user_config.evaluation}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "render_chart",
+      "description": "Render chart (SVG/PNG + verification table)"
+    },
+    {
+      "name": "validate_chart",
+      "description": "Validate chart spec"
+    },
+    {
+      "name": "describe_chart",
+      "description": "Describe chart (verification table)"
+    },
+    {
+      "name": "get_schema",
+      "description": "Get option schema slice"
+    },
+    {
+      "name": "list_chart_types",
+      "description": "List chart types"
+    },
+    {
+      "name": "list_examples",
+      "description": "List curated examples"
+    },
+    {
+      "name": "get_example",
+      "description": "Get example spec"
+    }
+  ],
+  "prompts": [
+    {
+      "name": "build_dashboard",
+      "description": "Plan and build a multi-chart West Coast Charts dashboard for a goal, validating and verifying every chart.",
+      "arguments": [
+        "goal",
+        "data",
+        "charts"
+      ],
+      "text": "Plan and build a multi-chart West Coast Charts dashboard for a goal, validating and verifying every chart. goal: ${arguments.goal}, data: ${arguments.data}, charts: ${arguments.charts}"
+    },
+    {
+      "name": "pick_chart_type",
+      "description": "Recommend the best West Coast Charts type for a dataset and question, with a validated starter spec.",
+      "arguments": [
+        "data",
+        "question"
+      ],
+      "text": "Recommend the best West Coast Charts type for a dataset and question, with a validated starter spec. data: ${arguments.data}, question: ${arguments.question}"
+    }
+  ],
+  "tools_generated": false,
+  "prompts_generated": false,
+  "keywords": [
+    "charts",
+    "svg",
+    "png",
+    "visualization",
+    "dashboard",
+    "apexcharts",
+    "data"
+  ],
+  "license": "MIT",
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "user_config": {
+    "license_key": {
+      "type": "string",
+      "title": "Licence key (Premium)",
+      "description": "Only needed for premium chart types (sankey, chord, radialColumn, ...). Leave empty for free types.",
+      "sensitive": true,
+      "required": false
+    },
+    "default_theme": {
+      "type": "string",
+      "title": "Default theme",
+      "description": "light or dark, used when a spec sets no theme.mode.",
+      "default": "light",
+      "required": false
+    },
+    "evaluation": {
+      "type": "boolean",
+      "title": "Evaluation mode",
+      "description": "Without a licence key, render premium chart types with an \"unlicensed\" watermark instead of failing.",
+      "default": false,
+      "required": false
+    }
+  }
+}

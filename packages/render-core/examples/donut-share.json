@@ -1,0 +1,32 @@
+{
+  "title": "Market share (donut)",
+  "description": "Five slices with labels.",
+  "tags": [
+    "core",
+    "part-to-whole"
+  ],
+  "spec": {
+    "chart": {
+      "type": "donut",
+      "width": 480,
+      "height": 360
+    },
+    "series": [
+      44,
+      25,
+      15,
+      10,
+      6
+    ],
+    "labels": [
+      "Chrome",
+      "Safari",
+      "Edge",
+      "Firefox",
+      "Other"
+    ],
+    "title": {
+      "text": "Browser share (%)"
+    }
+  }
+}
