@@ -16,7 +16,7 @@ npx --no-install wcc-mcp --help
 npx --no-install wcc-mcp --version
 ```
 
-The agent release URL is the publication target until its GitHub release is published. No npm registry publication or MCP registry listing is claimed. During preparation, substitute the locally built agent `.tgz` for the second URL. All remaining dependencies are public npm packages. No workspace checkout, private npm scope, or access token is required.
+Both release archives above are publicly available on GitHub. No npm registry publication or MCP registry listing is claimed. All remaining dependencies are public npm packages. No workspace checkout, private npm scope, or access token is required.
 
 ## Render and verify
 

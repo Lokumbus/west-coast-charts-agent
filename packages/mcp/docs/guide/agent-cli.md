@@ -42,7 +42,7 @@ Licence key sources, first one present wins (no fallthrough, like the browser li
 
 If the chosen key is invalid, the `license` error (`details.reason: license_invalid`) names the source in the message and in `details.keySource` (`option`, `spec` or `env`); it does not try the next source. `meta.licenseKeySource` reports the source used on success. Keys are never echoed into output, warnings or errors.
 
-**Fonts.** Output uses the frozen `inter-4.1` set (Inter 4.1, SIL OFL; Liberation Sans as fallback family), the same family as the theme, so CLI output matches browser output: the 18 curated examples match headless Chromium to within 1 px for every mark and label (`packages/render-core/scripts/parity.js`). The headless viewport equals the chart width, so responsive breakpoints see the chart size (a 420 px pie puts its legend at the bottom, as in a 420 px browser viewport). See `packages/render-core/fonts/FONTS.md`.
+**Fonts.** Output uses the frozen `inter-4.1` set (Inter 4.1, SIL OFL; Liberation Sans as fallback family). An earlier curated browser-parity record reported 18 examples within 1 px of headless Chromium for marks and labels. That historical result is not a certification of current RC7 charts: the current acceptance run passed 127 functional tests, with zero skips, and did not repeat a universal browser-parity audit. The comparison script remains `packages/render-core/scripts/parity.js`. The headless viewport equals the chart width, so responsive breakpoints see the chart size. See `packages/render-core/fonts/FONTS.md` for font provenance and measurement details.
 
 **Exit codes:**
 

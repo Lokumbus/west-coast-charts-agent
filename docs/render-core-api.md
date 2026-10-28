@@ -121,6 +121,8 @@ The CLI envelope adds `retryable`, which is false for all kinds today. clispec v
 
 ## Browser parity
 
+The earlier 18-example Chromium comparison is a historical curated record. The current RC7 acceptance run comprises 127 passing functional tests, not a renewed universal visual-parity certification.
+
 `node packages/render-core/scripts/parity.js [--out DIR] [id…]` renders each curated example with render-core and in headless Chromium (same spec, same fonts and viewport = chart width), then compares mark geometry (`tag.class` in order), text boxes, the legend, and pixels (pixelmatch). What makes the headless layout match:
 
 - Inter with tabular figures baked in (the theme's `tabular-nums`) plus GPOS kerning; canvas `measureText` (used by premium layouts) measures proportional figures, as browsers do.
