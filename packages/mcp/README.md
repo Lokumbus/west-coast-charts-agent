@@ -1,4 +1,4 @@
-# West Coast Charts MCP server 0.2.0
+# West Coast Charts MCP server 0.2.1
 
 Install `west-coast-charts-agent` and the matching released Core runtime using the two GitHub assets in the root [README](../../README.md). The executable is `wcc-mcp`; `wcc-mcp --help` and `wcc-mcp --version` terminate without starting the server. No unpublished `@westcoastcharts/mcp` npm package is required.
 

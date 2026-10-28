@@ -1,6 +1,6 @@
 # West Coast Charts agent tools
 
-`west-coast-charts-agent` 0.2.0 provides the `wcc` CLI, the `wcc-mcp` stdio/HTTP server, and the headless render API. It targets the released West Coast Charts **1.1.1-rc.7** runtime and its matching validator, schema and describe module.
+`west-coast-charts-agent` 0.2.1 provides the `wcc` CLI, the `wcc-mcp` stdio/HTTP server, and the headless render API. It targets the released West Coast Charts **1.1.1-rc.7** runtime and its matching validator, schema and describe module.
 
 ## Install
 
@@ -9,14 +9,14 @@ Node.js 20 or newer is recommended. Install the two release assets in one projec
 ```sh
 npm install \
   https://github.com/Lokumbus/west-coast-charts-core/releases/download/v1.1.1-rc.7/west-coast-charts-1.1.1-rc.7.tgz \
-  https://github.com/Lokumbus/west-coast-charts-agent/releases/download/v0.2.0/west-coast-charts-agent-0.2.0.tgz
+  https://github.com/Lokumbus/west-coast-charts-agent/releases/download/v0.2.1/west-coast-charts-agent-0.2.1.tgz
 npx --no-install wcc --help
 npx --no-install wcc version --json
 npx --no-install wcc-mcp --help
 npx --no-install wcc-mcp --version
 ```
 
-Both release archives above are publicly available on GitHub. No npm registry publication or MCP registry listing is claimed. All remaining dependencies are public npm packages. No workspace checkout, private npm scope, or access token is required.
+The Core archive is public on GitHub; agent 0.2.1 is the immutable installation-fix release. No npm registry publication or MCP registry listing is claimed. All remaining dependencies are public npm packages. No workspace checkout, private npm scope, or access token is required.
 
 ## Render and verify
 
@@ -52,3 +52,7 @@ Thirteen Premium types are recognized, including `quintTimeline`, `quintConverge
 The public distribution is built with `node scripts/build-distribution.cjs`. The source repository keeps its three private workspace packages; the release archive bundles their original source into one installable package with public dependencies. `npm test` exercises a complete runtime selected through `WCC_LIB_ROOT`; Premium tests require a complete licensed/evaluation-capable runtime. Optional key acceptance tests read private fixture paths from the environment and never print their contents.
 
 Tooling: MIT. Font copyright, SIL OFL texts and modifications: [font provenance](packages/render-core/fonts/FONTS.md). Chart-library licenses and attribution remain in the separate library distribution. See [NOTICE](NOTICE).
+
+## 0.2.1 installation correction
+
+Version 0.2.0 missed one internal CLI import and can fail with `MODULE_NOT_FOUND` outside the development workspace, even on `--help`. Use 0.2.1. Its packaging check rejects bare workspace imports, and installation acceptance runs in an operating-system temporary directory with an empty HOME and a module-resolution guard. The earlier in-repository installation proof was contaminated by ancestor workspace dependencies and is not an isolated-installation result. The 0.2.0 tag and archive remain unchanged.

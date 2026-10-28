@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "west-coast-charts",
   "display_name": "West Coast Charts",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Render, validate and describe charts headlessly: SVG/PNG plus a verification table for agents.",
   "long_description": "Official West Coast Charts MCP server: render, validate and describe charts headlessly (SVG/PNG + verification table), option schema slices and curated examples for AI agents.\n\nAll tools are read-only and deterministic; nothing is written to disk and no network is used. Premium chart types need a licence key.",
   "author": {

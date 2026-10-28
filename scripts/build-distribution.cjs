@@ -14,6 +14,10 @@ for (const name of ['README.md', 'LICENSE', 'NOTICE', 'docs']) copy(name)
 for (const name of ['cli', 'mcp', 'render-core']) {
   for (const part of ['src', 'package.json', 'LICENSE']) copy(`packages/${name}/${part}`)
   if (name !== 'render-core') copy(`packages/${name}/bin`)
+  const nestedFile = path.join(stage, 'packages', name, 'package.json')
+  const nested = JSON.parse(fs.readFileSync(nestedFile, 'utf8'))
+  for (const dep of Object.keys(nested.dependencies || {})) if (dep.startsWith('@wcc-agent/')) delete nested.dependencies[dep]
+  fs.writeFileSync(nestedFile, JSON.stringify(nested, null, 2) + '\n')
 }
 for (const name of ['packages/cli/skill', 'packages/mcp/docs', 'packages/render-core/examples']) copy(name)
 for (const f of fs.readdirSync(path.join(root, 'packages/render-core/fonts'), {withFileTypes:true})) if(f.isFile()) copy('packages/render-core/fonts/' + f.name)
@@ -28,7 +32,7 @@ for (const name of ['mcp', 'render-core']) {
   }
 }
 const pkg = {
-  name: 'west-coast-charts-agent', version: '0.2.0', description: 'CLI and MCP tools for real West Coast Charts validation, SVG/PNG rendering and chart description.',
+  name: 'west-coast-charts-agent', version: require('../package.json').version, description: 'CLI and MCP tools for real West Coast Charts validation, SVG/PNG rendering and chart description.',
   license: 'MIT', author: 'West Coast Software, Inh. Peter Kannengießer',
   repository: { type: 'git', url: 'git+https://github.com/Lokumbus/west-coast-charts-agent.git' },
   homepage: 'https://westcoast-charts.com/agents/', engines: { node: '>=20' },
@@ -43,6 +47,7 @@ fs.writeFileSync(path.join(stage, 'package.json'), JSON.stringify(pkg, null, 2) 
 function files(dir, prefix = '') {
  return fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? files(path.join(dir, e.name), prefix + e.name + '/') : [prefix + e.name]).sort()
 }
+require('./check-package-imports.cjs').checkPackageImports(stage)
 const records = files(stage).map(name => ({ path: name, sha256: sha(fs.readFileSync(path.join(stage, name))), bytes: fs.statSync(path.join(stage, name)).size }))
 for (const record of records) {
  if (/(?:^|\/)(?:node_modules|tmp|\.git|\.env)(?:\/|$)|(?:\.pem|\.key|premium\.min\.js)$/.test(record.path)) throw Error('Forbidden packaged path: ' + record.path)
@@ -52,7 +57,7 @@ for (const record of records) {
 const provenance = {
  schema: 'wcc-agent-source/1', version: pkg.version,
  baseCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
- derivation: 'Audited 0.2.0 working-tree source; no history, runtime or private fixtures in archive.',
+ derivation: 'Audited public source with file hashes; no history, runtime or private fixtures in archive.',
  library: { version: '1.1.1-rc.7', commit: 'a33451c1974cae377cc4584e5631669b62ea101a', url: 'https://github.com/Lokumbus/west-coast-charts-core/releases/download/v1.1.1-rc.7/west-coast-charts-1.1.1-rc.7.tgz', sha256: '3b2758567c9e30d0d50c1bd4a7c09933f315cf1b68308ad544ee0f574e8b9a7f' },
  files: records
 }

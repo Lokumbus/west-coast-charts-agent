@@ -1,6 +1,6 @@
 {
   "name": "@wcc-agent/cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "description": "wcc - agent-native CLI for West Coast Charts (headless SVG/PNG, validation, data tables). clispec v0.3.",
   "bin": {
@@ -12,7 +12,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@wcc-agent/render-core": "0.2.0"
+    "@wcc-agent/render-core": "0.2.1"
   },
   "scripts": {
     "test": "node --test test/"

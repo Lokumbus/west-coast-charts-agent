@@ -1,7 +1,7 @@
 {
   "name": "@wcc-agent/mcp",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Official West Coast Charts MCP server: render, validate and describe charts headlessly (SVG/PNG + verification table), option schema slices and curated examples for AI agents.",
   "license": "MIT",
   "main": "src/index.js",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.2",
-    "@wcc-agent/render-core": "0.2.0",
+    "@wcc-agent/render-core": "0.2.1",
     "express": "^5.2.1",
     "jose": "^6.1.3",
     "zod": "^4.1.12"

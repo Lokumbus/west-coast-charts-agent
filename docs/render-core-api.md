@@ -132,7 +132,7 @@ The earlier 18-example Chromium comparison is a historical curated record. The c
 
 ## 0.2.0 acceptance and compatibility
 
-The RC7 acceptance suite has 127 passing tests with zero skips when dedicated
+The RC7 functional acceptance suite has 127 passing tests with zero skips when dedicated
 valid/expired/foreign-signature fixture files are explicitly provided. These
 fixtures are not distributed. Validation is always the real `e1` validator;
 rendered/table results always have `meta.tableSource: "describe"`. There is no

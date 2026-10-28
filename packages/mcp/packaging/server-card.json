@@ -3,7 +3,7 @@
   "serverInfo": {
     "name": "west-coast-charts",
     "title": "West Coast Charts",
-    "version": "0.2.0"
+    "version": "0.2.1"
   },
   "description": "Official West Coast Charts MCP server: render, validate and describe charts headlessly (SVG/PNG + verification table), option schema slices and curated examples for AI agents.",
   "instructions": "West Coast Charts: render, validate and describe charts (ApexCharts-compatible JSON options) headlessly.\nWorkflow: list_chart_types -> list_examples/get_example -> get_schema for unsure options -> validate_chart until ok -> render_chart -> check the verification table.\nAll tools are read-only and deterministic. Errors are isError results {error:{kind,message,hint,details}}; follow the hint. Premium types need a licence key (kind \"license\", details.reason license_required|license_invalid). Verification tables use the wcc-describe/1 shape.\nDocs: resource wcc://docs/agent-quickstart.",
