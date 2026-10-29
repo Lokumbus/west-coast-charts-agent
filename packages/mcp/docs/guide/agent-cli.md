@@ -1,4 +1,4 @@
-# `wcc`: command reference (v0.2.0)
+# `wcc`: command reference (v0.2.2)
 
 **Machine-readable contract:** `wcc schema`. It validates against https://clispec.dev/schema/v0.3.json, and `wcc --help --json` prints the same document. Narrow it to one command with `wcc schema chart render`.
 
@@ -42,7 +42,7 @@ Licence key sources, first one present wins (no fallthrough, like the browser li
 
 If the chosen key is invalid, the `license` error (`details.reason: license_invalid`) names the source in the message and in `details.keySource` (`option`, `spec` or `env`); it does not try the next source. `meta.licenseKeySource` reports the source used on success. Keys are never echoed into output, warnings or errors.
 
-**Fonts.** Output uses the frozen `inter-4.1` set (Inter 4.1, SIL OFL; Liberation Sans as fallback family). An earlier curated browser-parity record reported 18 examples within 1 px of headless Chromium for marks and labels. That historical result is not a certification of current RC7 charts: the current acceptance run passed 127 functional tests, with zero skips, and did not repeat a universal browser-parity audit. The comparison script remains `packages/render-core/scripts/parity.js`. The headless viewport equals the chart width, so responsive breakpoints see the chart size. See `packages/render-core/fonts/FONTS.md` for font provenance and measurement details.
+**Fonts.** Output uses the frozen `inter-4.1` set (Inter 4.1, SIL OFL; Liberation Sans as fallback family). An earlier curated browser-parity record reported 18 examples within 1 px of headless Chromium for marks and labels. That historical result is not a certification of the current target: the recorded RC7 acceptance run passed 127 functional tests, with zero skips, and did not repeat a universal browser-parity audit. The comparison script remains `packages/render-core/scripts/parity.js`. The headless viewport equals the chart width, so responsive breakpoints see the chart size. See `packages/render-core/fonts/FONTS.md` for font provenance and measurement details.
 
 **Exit codes:**
 
@@ -71,7 +71,9 @@ WCC_LICENSE_KEY=… wcc chart render example:sankey-budget > sankey.svg
 wcc skills install .agents/skills
 ```
 
-### Real output (library 1.1.1-rc.7)
+### Recorded output (2026-10-28 documentation snapshot; library 1.1.1-rc.7)
+
+The following preserved output predates the 0.2.2 / 1.1.1 target. It is an example, not a version or acceptance proof for the 0.2.2 / 1.1.1 pair.
 
 A typo in a layer type. The report goes to stdout, the envelope to stderr, exit code 2:
 

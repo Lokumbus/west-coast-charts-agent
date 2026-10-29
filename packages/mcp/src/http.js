@@ -6,7 +6,8 @@
  *   GET  /.well-known/oauth-protected-resource RFC 9728 metadata (when auth is configured)
  *   GET  /healthz
  * Auth (optional): WCC_MCP_AUTH_TOKENS (comma separated static bearer tokens) and/or OAuth JWTs
- * via WCC_MCP_JWKS_URL (+ WCC_MCP_ISSUER, WCC_MCP_AUDIENCE). Unauthenticated -> 401 with
+ * via WCC_MCP_JWKS_URL (requires WCC_MCP_ISSUER, WCC_MCP_AUDIENCE and
+ * WCC_MCP_REQUIRED_SCOPES). Unauthenticated -> 401 with
  * WWW-Authenticate: Bearer resource_metadata="..." (RFC 9728), never 403.
  * Per-connection licence key: header x-wcc-license-key (Smithery x-from), else server env.
  */
@@ -25,7 +26,15 @@ function authFromEnv(env = process.env) {
   const tokens = (env.WCC_MCP_AUTH_TOKENS || '').split(',').map((s) => s.trim()).filter(Boolean)
   const jwks = env.WCC_MCP_JWKS_URL || ''
   if (!tokens.length && !jwks) return null
-  return { tokens, jwks, issuer: env.WCC_MCP_ISSUER || undefined, audience: env.WCC_MCP_AUDIENCE || undefined, authorizationServers: (env.WCC_MCP_AUTHORIZATION_SERVERS || env.WCC_MCP_ISSUER || '').split(',').map((s) => s.trim()).filter(Boolean) }
+  const issuer = (env.WCC_MCP_ISSUER || '').trim()
+  const audience = (env.WCC_MCP_AUDIENCE || '').trim()
+  const requiredScopes = (env.WCC_MCP_REQUIRED_SCOPES || '').split(/\s+/).filter(Boolean)
+  if (jwks) {
+    for (const [name, present] of [['WCC_MCP_ISSUER', issuer], ['WCC_MCP_AUDIENCE', audience], ['WCC_MCP_REQUIRED_SCOPES', requiredScopes.length]]) {
+      if (!present) throw new Error(`${name} is required when WCC_MCP_JWKS_URL is configured`)
+    }
+  }
+  return { tokens, jwks, issuer: issuer || undefined, audience: audience || undefined, requiredScopes: requiredScopes.length ? requiredScopes : ['wcc:render'], authorizationServers: (env.WCC_MCP_AUTHORIZATION_SERVERS || issuer).split(',').map((s) => s.trim()).filter(Boolean) }
 }
 
 function makeVerifier(auth) {
@@ -35,13 +44,18 @@ function makeVerifier(auth) {
     async verifyAccessToken(token) {
       const d = crypto.createHash('sha256').update(token).digest()
       const i = digests.findIndex((x) => crypto.timingSafeEqual(x, d))
-      if (i >= 0) return { token, clientId: `static-${i}`, scopes: ['wcc:render'], expiresAt: Math.floor(Date.now() / 1000) + 3600 }
+      if (i >= 0) return { token, clientId: `static-${i}`, scopes: auth.requiredScopes, expiresAt: Math.floor(Date.now() / 1000) + 3600 }
       if (auth.jwks) {
         const jose = await import('jose')
         jwksFn = jwksFn || jose.createRemoteJWKSet(new URL(auth.jwks))
         try {
-          const { payload } = await jose.jwtVerify(token, jwksFn, { issuer: auth.issuer, audience: auth.audience })
-          return { token, clientId: String(payload.client_id || payload.azp || payload.sub || 'jwt'), scopes: String(payload.scope || '').split(' ').filter(Boolean), expiresAt: payload.exp, resource: payload.aud ? [].concat(payload.aud)[0] : undefined }
+          const { payload } = await jose.jwtVerify(token, jwksFn, { issuer: auth.issuer, audience: auth.audience, requiredClaims: ['iss', 'aud', 'exp'] })
+          const subject = typeof payload.sub === 'string' && payload.sub ? payload.sub : null
+          const client = typeof payload.client_id === 'string' && payload.client_id ? payload.client_id : typeof payload.azp === 'string' && payload.azp ? payload.azp : null
+          if (!subject && !client) throw new InvalidTokenError('Token has no principal identity')
+          // The OAuth client alone is not a tenant: two users can share the same app.
+          const principal = crypto.createHash('sha256').update(JSON.stringify([payload.iss, subject, client])).digest('hex')
+          return { token, clientId: `jwt-${principal}`, scopes: typeof payload.scope === 'string' ? payload.scope.split(/\s+/).filter(Boolean) : [], expiresAt: payload.exp, resource: auth.audience }
         } catch (e) {
           throw new InvalidTokenError('Invalid or expired token')
         }
@@ -80,7 +94,7 @@ function createHttpApp({ env = process.env, core, host = '127.0.0.1', publicUrl,
       resource: `${origin(req)}/mcp`,
       authorization_servers: auth.authorizationServers.length ? auth.authorizationServers : undefined,
       bearer_methods_supported: ['header'],
-      scopes_supported: ['wcc:render'],
+      scopes_supported: auth.requiredScopes,
       resource_name: 'West Coast Charts MCP',
       resource_documentation: 'https://westcoast-charts.com/agents//'
     })
@@ -91,7 +105,7 @@ function createHttpApp({ env = process.env, core, host = '127.0.0.1', publicUrl,
   const guards = []
   if (auth) {
     const verifier = makeVerifier(auth)
-    guards.push((req, res, next) => requireBearerAuth({ verifier, resourceMetadataUrl: prmUrl(req) })(req, res, next))
+    guards.push((req, res, next) => requireBearerAuth({ verifier, requiredScopes: auth.requiredScopes, resourceMetadataUrl: prmUrl(req) })(req, res, next))
   }
 
   app.post('/mcp', ...guards, async (req, res) => {

@@ -1,0 +1,397 @@
+{
+  "version": "0.2.2",
+  "files": [
+    {
+      "path": "docs/cli.md",
+      "sha256": "132491bd7d58fa0f8fbfa5cf5e87c415b1770489580f3291d27eec7314bf28f0"
+    },
+    {
+      "path": "docs/render-core-api.md",
+      "sha256": "9eab602dd2ec6cd6633e737cd1af527fdb4e3284d59bd06e3d18d8077f23dfdc"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "4d99b32500bcf6e369f245193da4b7e3555164f752f6d2363a73eb7fe0471b32"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "330638ce9e1c1edf552b84a221138496bf80df6927b2b7428b4e16e9f23cfe09"
+    },
+    {
+      "path": "packages/cli/bin/wcc.js",
+      "sha256": "3e994b0256960ee3ebfad89c4e6cb3878754b6ec179f1d880cb94a7ee08643e3"
+    },
+    {
+      "path": "packages/cli/LICENSE",
+      "sha256": "4d99b32500bcf6e369f245193da4b7e3555164f752f6d2363a73eb7fe0471b32"
+    },
+    {
+      "path": "packages/cli/package.json",
+      "sha256": "95fb005d50ea0bc38b37e1f52322342d47e791ca4d0f621043a7733c967ad443"
+    },
+    {
+      "path": "packages/cli/skill/SKILL.md",
+      "sha256": "381c359e863ed3d341b0bf086501ed5eba296556829ab032342a61fe5a1eb16a"
+    },
+    {
+      "path": "packages/cli/src/commands.js",
+      "sha256": "1aa9bc3f817d1b589f51c1dcdb9a5f375e0a47688ef9595e7aa44b166fb6e9db"
+    },
+    {
+      "path": "packages/cli/src/io.js",
+      "sha256": "4ee745953f2c62be9f10f053f7e4881111a552cf1442b4a5d0e34ada8dc6b283"
+    },
+    {
+      "path": "packages/cli/src/main.js",
+      "sha256": "74916d8564ec9498cb20b9789e69fe2e0a42855db3c0cb42535d78a3c40c8c03"
+    },
+    {
+      "path": "packages/mcp/bin/wcc-mcp.js",
+      "sha256": "e312e49cf3b08e12aeacf9a67bc8ed2104d9c427f546f569e1d3015363d0147f"
+    },
+    {
+      "path": "packages/mcp/docs/guide/agent-cli.md",
+      "sha256": "132491bd7d58fa0f8fbfa5cf5e87c415b1770489580f3291d27eec7314bf28f0"
+    },
+    {
+      "path": "packages/mcp/docs/guide/agent-install.md",
+      "sha256": "dbf7869d126035d3f68362e050b3bb8ce36eb53b3256ccdf17f9515250858cfb"
+    },
+    {
+      "path": "packages/mcp/docs/guide/http-security.md",
+      "sha256": "734a75984a2d3a6109c32240e70ffd69abca6cdd4bb40cafbaa7e92db49a3efb"
+    },
+    {
+      "path": "packages/mcp/LICENSE",
+      "sha256": "4d99b32500bcf6e369f245193da4b7e3555164f752f6d2363a73eb7fe0471b32"
+    },
+    {
+      "path": "packages/mcp/package.json",
+      "sha256": "df51a798e8cb7934ad3f3c8a23df4d609a66486a3200f1c473910fdd6d82ec10"
+    },
+    {
+      "path": "packages/mcp/README.md",
+      "sha256": "751984c2fa0a54a54e88e0153f56e27a550c3bb6a64adc419c3ce966c81bb84c"
+    },
+    {
+      "path": "packages/mcp/src/card.js",
+      "sha256": "253cb6decd26e15f6125d8139c99f01f563047d61e2671c325f1476ddd613f1f"
+    },
+    {
+      "path": "packages/mcp/src/config.js",
+      "sha256": "13c3255ac59876d06790a6af0720258fd5bf9daf58c337ce0286c9cdddecfc7c"
+    },
+    {
+      "path": "packages/mcp/src/core.js",
+      "sha256": "ca2bef70167463c8e760d17e938537cd9be1097ecb02b1eb2b504abc887da8e9"
+    },
+    {
+      "path": "packages/mcp/src/describe.js",
+      "sha256": "a643d91a06bfe1825e841fe441560745f62b3c88228ee1f9f4555529c4d166b0"
+    },
+    {
+      "path": "packages/mcp/src/errors.js",
+      "sha256": "222340332c27ac5ae8f0f9367672c0ac8190b62cdc9089b7fbee2e94a8d6fb11"
+    },
+    {
+      "path": "packages/mcp/src/http.js",
+      "sha256": "1254cb81848fe83aff1cf23264be49fd1c5001e0b371fb2fb730627f92578029"
+    },
+    {
+      "path": "packages/mcp/src/index.js",
+      "sha256": "79c6698ba335be600ef9d3c3aa374e3423b5bd4dc8426b270f3395d010c4b632"
+    },
+    {
+      "path": "packages/mcp/src/prompts.js",
+      "sha256": "be314de080a4c90280cf7613b517e4c0b7a13df50cc8af479051b838c73a0cd8"
+    },
+    {
+      "path": "packages/mcp/src/resources.js",
+      "sha256": "1a86ee4ae84e9cf65e1851773f7cbd9e9321a59496a285ec189fb45315d1513b"
+    },
+    {
+      "path": "packages/mcp/src/server.js",
+      "sha256": "2c0192b5370e40ebb73b9c9c5de96f221590cd3228893cc462bdce897c18f547"
+    },
+    {
+      "path": "packages/mcp/src/tools.js",
+      "sha256": "25246256ba37f953f7d6c4c0b50231fdd448a4750a59c97274508d298ea53085"
+    },
+    {
+      "path": "packages/render-core/examples/area-stacked.json",
+      "sha256": "70e1521d489facdfaa0946e794cd2b7ed946db72773687d0e858962d358fd0ce"
+    },
+    {
+      "path": "packages/render-core/examples/bar-horizontal.json",
+      "sha256": "8249f3ac788e12a593f9652eb48eac6d44dba985f7540eed5da2c1b4c05d1c98"
+    },
+    {
+      "path": "packages/render-core/examples/chord-plans.json",
+      "sha256": "31fed1d42b4d9f5c118489acb0440e1c2e30515d0b0a226c5823a9ed76102fc5"
+    },
+    {
+      "path": "packages/render-core/examples/column-grouped.json",
+      "sha256": "1b05b88a9adfd2259ac13988edbe1062e86828ae587f3e4bae8029773be912bc"
+    },
+    {
+      "path": "packages/render-core/examples/donut-orient.json",
+      "sha256": "5dfe39a4312d6fcd27ee8c1435ab8913e8555a6d36037850f54630bc7bf8fa8a"
+    },
+    {
+      "path": "packages/render-core/examples/donut-share.json",
+      "sha256": "6f8328d55f7492ee076df8c1c3147e0ef27cca8bd6344b0489d5e967b09a746d"
+    },
+    {
+      "path": "packages/render-core/examples/funnel-conversion.json",
+      "sha256": "8792aee227a7c5a0eadc6c973104457a9eebd6606d1ad58eb38e61f468e4786c"
+    },
+    {
+      "path": "packages/render-core/examples/gantt-launch.json",
+      "sha256": "086562bb36790df498aa641529cb30c79bc30668b6c2f45dc17703fb9ea40d51"
+    },
+    {
+      "path": "packages/render-core/examples/gauge-progress.json",
+      "sha256": "87dc198ce6d7c392f3fb8f64c2aba64a8557364a7ac85ddfc7bdf7421f5dc8e9"
+    },
+    {
+      "path": "packages/render-core/examples/heatmap-basic.json",
+      "sha256": "23c27c6a311e87c9a2d5de4a2be8a7e09248d7f6b3a01f6cda07a15dfe961ab4"
+    },
+    {
+      "path": "packages/render-core/examples/line-basic.json",
+      "sha256": "8f3fc3eca32ec2d295b9ce0f2095497a96a1d824f5d208b81c12cea1b67aed3c"
+    },
+    {
+      "path": "packages/render-core/examples/map-world.json",
+      "sha256": "18012a6f72514f5153145bb9749f5a3a98a84c4a36fd8fd1e3098dd9bd24ea7f"
+    },
+    {
+      "path": "packages/render-core/examples/marimekko-market.json",
+      "sha256": "6e3794311190f4968ebd66c4b52ffbcee9205f0815944ddef41ccd8182aaf8f3"
+    },
+    {
+      "path": "packages/render-core/examples/network-facet-incident.json",
+      "sha256": "4d27d377475139b79bd25bd4f3757accab9bb76a5b1eb90efd5512f823d9e859"
+    },
+    {
+      "path": "packages/render-core/examples/network-services.json",
+      "sha256": "173c15feb2f55d6c2c2d143413f0728d2b866c8a564cd7b1e61b8c4b223f1d93"
+    },
+    {
+      "path": "packages/render-core/examples/pie-basic.json",
+      "sha256": "f5d0060e2e320d183218eb517559b63935eeaa094550fe8a967a29c3112722af"
+    },
+    {
+      "path": "packages/render-core/examples/quint-convergence.json",
+      "sha256": "3eb7bfb07b05395b8c3838895c605b5a9a6865ac2cde87785c32a09011441be1"
+    },
+    {
+      "path": "packages/render-core/examples/quint-timeline.json",
+      "sha256": "86415c83f1d978b48f07b81245f88a64058a53b42f5aa1aa7b9a0ea3584d06fc"
+    },
+    {
+      "path": "packages/render-core/examples/radar-skills.json",
+      "sha256": "63df72f5b736fbd0a03310cbd03e449e1cbc53131861bf7aff3969f62c8eb526"
+    },
+    {
+      "path": "packages/render-core/examples/radial-arc.json",
+      "sha256": "991c378efb3e98d2fa630ed6bd7cf61951c8347511fc6dbb7df34dc50b61f9d4"
+    },
+    {
+      "path": "packages/render-core/examples/radial-chord.json",
+      "sha256": "a442342c9c5f6686e28ae46efc7e94fb1352e0854523936c2bb7b16888268d68"
+    },
+    {
+      "path": "packages/render-core/examples/radial-column-ring.json",
+      "sha256": "d1d49ba7302ebcf3a278b77dfac36210f8beb630fb1569fba52a801a161fbcd3"
+    },
+    {
+      "path": "packages/render-core/examples/radial-gauge.json",
+      "sha256": "782ee4c1bf430e016f53d2777b218a088d84691a6daeaf95ddbbb7b43cfa8282"
+    },
+    {
+      "path": "packages/render-core/examples/radial-goals.json",
+      "sha256": "f420b772cd26d2ff78b136a75734f93b33cbe07210f80c8bd5c20d18186279bb"
+    },
+    {
+      "path": "packages/render-core/examples/radial-matrix-core.json",
+      "sha256": "7d3cf31aaf7f17bd01caaae48dd1224b5bc1ac38df6029f7214e30039a3d1fa6"
+    },
+    {
+      "path": "packages/render-core/examples/radial-nested-donut.json",
+      "sha256": "4d2e621040bd42e56bde6e16a4a714add0d2ec9b7f7fc4de3a237a5f06e1d6ae"
+    },
+    {
+      "path": "packages/render-core/examples/radial-pie-donut-nested.json",
+      "sha256": "49a93360d22f64ea14ffaf168f34ef09b008d97e0a840a81b63f692a47efb264"
+    },
+    {
+      "path": "packages/render-core/examples/radial-polar-heatmap.json",
+      "sha256": "0200d9965945cf7dee09deb23fb435607a9f430f53cae6252ed57e989ed7508b"
+    },
+    {
+      "path": "packages/render-core/examples/radial-sunburst.json",
+      "sha256": "00b19594b3d051fb54fc9686f1673b0d3f1282b69be287ddc30fa5781e304894"
+    },
+    {
+      "path": "packages/render-core/examples/radial-wave-ring.json",
+      "sha256": "8f0c29501e7fab6b434b17e78f0109287590182a29a62509dfa7dfb8bc11c031"
+    },
+    {
+      "path": "packages/render-core/examples/sankey-budget.json",
+      "sha256": "0fc85394d6cb3f39404c21b137a8b1a703ef121b67aa07d664f056c6af40d3cd"
+    },
+    {
+      "path": "packages/render-core/examples/scatter-basic.json",
+      "sha256": "4546f3e92aca81332f705ff04b484072ec7bd2141704eb1c99ade975330a6164"
+    },
+    {
+      "path": "packages/render-core/examples/schedule-demo.json",
+      "sha256": "44bfa66e3c749ca76c4d2d64266c05272c5203d58a5cf14782b2cd07e3e34b1c"
+    },
+    {
+      "path": "packages/render-core/examples/stock-acme.json",
+      "sha256": "9caa2d60a17635d9d54871898132bed85b2498b84387ed074c957bb297e87f63"
+    },
+    {
+      "path": "packages/render-core/examples/stock-ohlc-candlestick.json",
+      "sha256": "63f23e2964c14c9a08dda95de4455990298c964075b04c47467d59ba9edaf42d"
+    },
+    {
+      "path": "packages/render-core/examples/sunburst-browsers.json",
+      "sha256": "3b78f6c4aeeb7a2d257810f76a234616a82e33da9dcab2ff498e22b355742ee6"
+    },
+    {
+      "path": "packages/render-core/examples/tree-org.json",
+      "sha256": "c0808a576944bdca5fd37d268e3003ee925139c1d8b5bdf40a1d383ebf74e7e3"
+    },
+    {
+      "path": "packages/render-core/examples/vitals-clock-demo.json",
+      "sha256": "40b1f756a7bc9b2ccdf2555ca427e4701a299961371f7e0e44c3208bcca3c884"
+    },
+    {
+      "path": "packages/render-core/examples/waterfall-pnl.json",
+      "sha256": "721265d4164e9606eb6bc1d45dc8d7c79aea57dd21c721301d73a189ff3f6270"
+    },
+    {
+      "path": "packages/render-core/fonts/FONTS.md",
+      "sha256": "c7a9abc7778ac151ac4304ce359ecc0afe69247edf7e5fd029ade071d14b12c6"
+    },
+    {
+      "path": "packages/render-core/fonts/LiberationSans-Bold.ttf",
+      "sha256": "1b5f2da6f4cadce4c05b9ecebe3a6fcd374eb95ae443605e799f4c3287978939"
+    },
+    {
+      "path": "packages/render-core/fonts/LiberationSans-BoldItalic.ttf",
+      "sha256": "352e9dc2be89f210dbd3c0fd5dfaf97135de70e0beb5f22378601861462493a7"
+    },
+    {
+      "path": "packages/render-core/fonts/LiberationSans-Italic.ttf",
+      "sha256": "93ff5260834141b6f9d8f2b846d427f3a5dc492dbdce8ebdad406e38a38f34bb"
+    },
+    {
+      "path": "packages/render-core/fonts/LiberationSans-Regular.ttf",
+      "sha256": "bade59d822652f76e6941aa87b40a87c13d1cc70db98ededb5011127efafd1d3"
+    },
+    {
+      "path": "packages/render-core/fonts/LICENSE-Inter.txt",
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "path": "packages/render-core/fonts/LICENSE-Liberation.txt",
+      "sha256": "f32df582a2aab128c07b2f7e36e7b928dc5f6bd82657b905c04f91459f9e5cf9"
+    },
+    {
+      "path": "packages/render-core/fonts/WCCInterTabular-Bold.ttf",
+      "sha256": "d985f6112f95d5ef48c0f75ef2053a70d809e7660c307dc8fd1461ca0d93ee01"
+    },
+    {
+      "path": "packages/render-core/fonts/WCCInterTabular-BoldItalic.ttf",
+      "sha256": "1f0e5c49300e11049c0ad87948292a2fd3b35657ef20d9e56e58ca96f1b4ab84"
+    },
+    {
+      "path": "packages/render-core/fonts/WCCInterTabular-Italic.ttf",
+      "sha256": "994940bbbb0b6bf4ae23c572f885addc88715d376f04e1d1002377954af4a731"
+    },
+    {
+      "path": "packages/render-core/fonts/WCCInterTabular-Medium.ttf",
+      "sha256": "7215eb8039743254ecb92439794bea02fca7df16cd04d021f711c32de244dd8f"
+    },
+    {
+      "path": "packages/render-core/fonts/WCCInterTabular-Regular.ttf",
+      "sha256": "55def8b2c5af5c9185be1680bd384e07a4e89a9a558050ab2b7afdc691dff68c"
+    },
+    {
+      "path": "packages/render-core/fonts/WCCInterTabular-SemiBold.ttf",
+      "sha256": "03680970e2761c3199a969aa8ed3f0e4b6ca7f1975f4078b8ffdc173efc2cdca"
+    },
+    {
+      "path": "packages/render-core/fonts/WCCInterTabular.proportional.json",
+      "sha256": "83df324309ececc1bd399c87e4eca8ba7c127e9c5483cd289d83ee38065e2d17"
+    },
+    {
+      "path": "packages/render-core/LICENSE",
+      "sha256": "4d99b32500bcf6e369f245193da4b7e3555164f752f6d2363a73eb7fe0471b32"
+    },
+    {
+      "path": "packages/render-core/package.json",
+      "sha256": "c7df55dfc2a49e089ffa765379ece3e989e8bc330ffd868df69623651cea2663"
+    },
+    {
+      "path": "packages/render-core/src/errors.js",
+      "sha256": "23d810fae23656df44dcb7c7c61398452a834f0c30eadfbe94c2d33bd323b545"
+    },
+    {
+      "path": "packages/render-core/src/examples.js",
+      "sha256": "a6bec38b671520fa8f0d0dc8c7fb9a101f16bddcdf86191e6b9c8fa3625fbf45"
+    },
+    {
+      "path": "packages/render-core/src/fonts.js",
+      "sha256": "3dc87e14f101ad2548203610c4f578740a58d890af9632cff49826ac8cae172f"
+    },
+    {
+      "path": "packages/render-core/src/geometry.js",
+      "sha256": "d1dcc7eaf33235b4cd7172a00071faa1517c9793cac2a0367d534aa213e248fc"
+    },
+    {
+      "path": "packages/render-core/src/index.js",
+      "sha256": "851c20dd61c4138dde74a6c4f9edb8bc29da13b18f297e77f5cb21e80ae5ffe2"
+    },
+    {
+      "path": "packages/render-core/src/kerning.js",
+      "sha256": "82839bd9bf9d2a85435b795379ccdfdd795b4ad7bf21e433c405fae226caeacd"
+    },
+    {
+      "path": "packages/render-core/src/lib.js",
+      "sha256": "2eaea7d0ae4d4803b8fb05c9694af8b92ba9bd9c25530c0ae6448e7e221c5e62"
+    },
+    {
+      "path": "packages/render-core/src/render.js",
+      "sha256": "2ba5f76e43b9a0d6af367a2f1d094210ad869b766240223af928be46f9389456"
+    },
+    {
+      "path": "packages/render-core/src/schema.js",
+      "sha256": "140c5af5c8bf541519db90b5895f331c98895096fef9965b663376feb2c8b847"
+    },
+    {
+      "path": "packages/render-core/src/types.js",
+      "sha256": "fb7cfc8b6d3b24e6748c45701f51e49250c4a0bc9f4907a2eaa68e745a59b357"
+    },
+    {
+      "path": "packages/render-core/src/validate.js",
+      "sha256": "31b6110dec468ee433978456fd6223a92a8d938880c08491ea1adb77f5d48184"
+    },
+    {
+      "path": "README.md",
+      "sha256": "02dd35f359faa5290a1d21b9775cf8269e271aa35d83de0a4fda2ec6282aa285"
+    },
+    {
+      "path": "package.json",
+      "sha256": "89d84ad06715370e13fd774d6c9fc6825339d42af901aab7c36a486d520bcfff"
+    },
+    {
+      "path": "SOURCE-PROVENANCE.json",
+      "sha256": "7d7ca95b3a54b3ca3d343dde52b9bf438560bea4ea21d7cc8c22f366a7585508"
+    }
+  ]
+}

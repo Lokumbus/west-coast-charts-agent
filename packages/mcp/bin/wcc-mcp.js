@@ -12,7 +12,7 @@ const argv = process.argv.slice(2)
 const f = parseFlags(argv)
 
 if (f.help || f.h) {
-  process.stderr.write('wcc-mcp: West Coast Charts MCP server\n  --transport stdio|http (default stdio)\n  --port N --host H (http)\n  --license-key KEY | env WCC_LICENSE_KEY\n  --default-theme light|dark\n  --max-pixels N\n  --evaluation | env WCC_EVALUATION=1 (premium without a key: watermarked preview)\nHTTP auth: WCC_MCP_AUTH_TOKENS, WCC_MCP_JWKS_URL, WCC_MCP_ISSUER, WCC_MCP_AUDIENCE, WCC_MCP_PUBLIC_URL\n')
+  process.stderr.write('wcc-mcp: West Coast Charts MCP server\n  --transport stdio|http (default stdio)\n  --port N --host H (http)\n  --license-key KEY | env WCC_LICENSE_KEY\n  --default-theme light|dark\n  --max-pixels N\n  --evaluation | env WCC_EVALUATION=1 (premium without a key: watermarked preview)\nHTTP auth: WCC_MCP_AUTH_TOKENS, WCC_MCP_JWKS_URL, WCC_MCP_ISSUER, WCC_MCP_AUDIENCE, WCC_MCP_REQUIRED_SCOPES, WCC_MCP_PUBLIC_URL\nJWT mode requires explicit issuer, audience and required scopes. MCP protocol: 2025-11-25.\n')
   process.exit(0)
 }
 if (f.version) {

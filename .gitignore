@@ -1,6 +1,0 @@
-node_modules/
-*.log
-/tmp/
-
-/build/
-/packages/mcp/build/

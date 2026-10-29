@@ -1,15 +1,146 @@
 {
-  "name": "wcc-agent",
-  "private": true,
-  "version": "0.2.1",
-  "description": "West Coast Charts agent tooling: headless render core, CLI wcc, MCP server",
-  "workspaces": [
-    "packages/*"
-  ],
-  "engines": {
-    "node": ">=18"
+  "name": "west-coast-charts-agent",
+  "version": "0.2.2",
+  "description": "CLI and MCP tools for real West Coast Charts validation, SVG/PNG rendering and chart description.",
+  "license": "MIT",
+  "author": "West Coast Software, Inh. Peter Kannengießer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lokumbus/west-coast-charts-agent.git"
   },
-  "scripts": {
-    "test": "node --test packages/*/test/*.test.js scripts/test-package-imports.cjs"
-  }
+  "homepage": "https://westcoast-charts.com/agents/",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "wcc": "packages/cli/bin/wcc.js",
+    "wcc-mcp": "packages/mcp/bin/wcc-mcp.js"
+  },
+  "main": "packages/render-core/src/index.js",
+  "exports": {
+    ".": "./packages/render-core/src/index.js",
+    "./render-core": "./packages/render-core/src/index.js",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "express": "5.3.0",
+    "jose": "6.2.13",
+    "zod": "4.6.7",
+    "@resvg/resvg-js": "2.6.2",
+    "jsdom": "26.1.0",
+    "opentype.js": "2.0.0"
+  },
+  "peerDependencies": {
+    "west-coast-charts": "1.1.1"
+  },
+  "peerDependenciesMeta": {
+    "west-coast-charts": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "files": [
+    "docs/cli.md",
+    "docs/render-core-api.md",
+    "LICENSE",
+    "NOTICE",
+    "packages/cli/bin/wcc.js",
+    "packages/cli/LICENSE",
+    "packages/cli/package.json",
+    "packages/cli/skill/SKILL.md",
+    "packages/cli/src/commands.js",
+    "packages/cli/src/io.js",
+    "packages/cli/src/main.js",
+    "packages/mcp/bin/wcc-mcp.js",
+    "packages/mcp/docs/guide/agent-cli.md",
+    "packages/mcp/docs/guide/agent-install.md",
+    "packages/mcp/docs/guide/http-security.md",
+    "packages/mcp/LICENSE",
+    "packages/mcp/package.json",
+    "packages/mcp/README.md",
+    "packages/mcp/src/card.js",
+    "packages/mcp/src/config.js",
+    "packages/mcp/src/core.js",
+    "packages/mcp/src/describe.js",
+    "packages/mcp/src/errors.js",
+    "packages/mcp/src/http.js",
+    "packages/mcp/src/index.js",
+    "packages/mcp/src/prompts.js",
+    "packages/mcp/src/resources.js",
+    "packages/mcp/src/server.js",
+    "packages/mcp/src/tools.js",
+    "packages/render-core/examples/area-stacked.json",
+    "packages/render-core/examples/bar-horizontal.json",
+    "packages/render-core/examples/chord-plans.json",
+    "packages/render-core/examples/column-grouped.json",
+    "packages/render-core/examples/donut-orient.json",
+    "packages/render-core/examples/donut-share.json",
+    "packages/render-core/examples/funnel-conversion.json",
+    "packages/render-core/examples/gantt-launch.json",
+    "packages/render-core/examples/gauge-progress.json",
+    "packages/render-core/examples/heatmap-basic.json",
+    "packages/render-core/examples/line-basic.json",
+    "packages/render-core/examples/map-world.json",
+    "packages/render-core/examples/marimekko-market.json",
+    "packages/render-core/examples/network-facet-incident.json",
+    "packages/render-core/examples/network-services.json",
+    "packages/render-core/examples/pie-basic.json",
+    "packages/render-core/examples/quint-convergence.json",
+    "packages/render-core/examples/quint-timeline.json",
+    "packages/render-core/examples/radar-skills.json",
+    "packages/render-core/examples/radial-arc.json",
+    "packages/render-core/examples/radial-chord.json",
+    "packages/render-core/examples/radial-column-ring.json",
+    "packages/render-core/examples/radial-gauge.json",
+    "packages/render-core/examples/radial-goals.json",
+    "packages/render-core/examples/radial-matrix-core.json",
+    "packages/render-core/examples/radial-nested-donut.json",
+    "packages/render-core/examples/radial-pie-donut-nested.json",
+    "packages/render-core/examples/radial-polar-heatmap.json",
+    "packages/render-core/examples/radial-sunburst.json",
+    "packages/render-core/examples/radial-wave-ring.json",
+    "packages/render-core/examples/sankey-budget.json",
+    "packages/render-core/examples/scatter-basic.json",
+    "packages/render-core/examples/schedule-demo.json",
+    "packages/render-core/examples/stock-acme.json",
+    "packages/render-core/examples/stock-ohlc-candlestick.json",
+    "packages/render-core/examples/sunburst-browsers.json",
+    "packages/render-core/examples/tree-org.json",
+    "packages/render-core/examples/vitals-clock-demo.json",
+    "packages/render-core/examples/waterfall-pnl.json",
+    "packages/render-core/fonts/FONTS.md",
+    "packages/render-core/fonts/LiberationSans-Bold.ttf",
+    "packages/render-core/fonts/LiberationSans-BoldItalic.ttf",
+    "packages/render-core/fonts/LiberationSans-Italic.ttf",
+    "packages/render-core/fonts/LiberationSans-Regular.ttf",
+    "packages/render-core/fonts/LICENSE-Inter.txt",
+    "packages/render-core/fonts/LICENSE-Liberation.txt",
+    "packages/render-core/fonts/WCCInterTabular-Bold.ttf",
+    "packages/render-core/fonts/WCCInterTabular-BoldItalic.ttf",
+    "packages/render-core/fonts/WCCInterTabular-Italic.ttf",
+    "packages/render-core/fonts/WCCInterTabular-Medium.ttf",
+    "packages/render-core/fonts/WCCInterTabular-Regular.ttf",
+    "packages/render-core/fonts/WCCInterTabular-SemiBold.ttf",
+    "packages/render-core/fonts/WCCInterTabular.proportional.json",
+    "packages/render-core/LICENSE",
+    "packages/render-core/package.json",
+    "packages/render-core/src/errors.js",
+    "packages/render-core/src/examples.js",
+    "packages/render-core/src/fonts.js",
+    "packages/render-core/src/geometry.js",
+    "packages/render-core/src/index.js",
+    "packages/render-core/src/kerning.js",
+    "packages/render-core/src/lib.js",
+    "packages/render-core/src/render.js",
+    "packages/render-core/src/schema.js",
+    "packages/render-core/src/types.js",
+    "packages/render-core/src/validate.js",
+    "README.md",
+    "SOURCE-PROVENANCE.json",
+    "INTEGRITY.json"
+  ]
 }
