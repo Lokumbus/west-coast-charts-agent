@@ -1,9 +1,9 @@
 {
   "name": "west-coast-charts-agent",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "CLI and MCP tools for real West Coast Charts validation, SVG/PNG rendering and chart description.",
   "license": "MIT",
-  "author": "West Coast Software, Inh. Peter Kannengießer",
+  "author": "West Coast Software, Inh. Peter Kannengie\u00dfer",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lokumbus/west-coast-charts-agent.git"
@@ -32,7 +32,7 @@
     "opentype.js": "2.0.0"
   },
   "peerDependencies": {
-    "west-coast-charts": "1.1.1"
+    "west-coast-charts": ">=1.1.1 <1.2.0"
   },
   "peerDependenciesMeta": {
     "west-coast-charts": {
@@ -142,5 +142,8 @@
     "README.md",
     "SOURCE-PROVENANCE.json",
     "INTEGRITY.json"
+  ],
+  "workspaces": [
+    "packages/*"
   ]
 }

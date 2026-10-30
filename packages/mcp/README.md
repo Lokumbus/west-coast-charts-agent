@@ -1,6 +1,6 @@
-# West Coast Charts MCP server 0.2.2
+# West Coast Charts MCP server 0.2.3
 
-Use `npm install west-coast-charts@1.1.1 west-coast-charts-agent@0.2.2` for the matching 0.2.2 / 1.1.1 release pair. Verify availability and artifact checksums in the release metadata; see the root [README](../../README.md) for installation. The executable is `wcc-mcp`; `wcc-mcp --help` and `wcc-mcp --version` terminate without starting the server. No unpublished `@westcoastcharts/mcp` npm package is required.
+Use `npm install 'west-coast-charts@>=1.1.1 <1.2.0' west-coast-charts-agent@0.2.3` for the supported 0.2.3 / Core 1.1.x range. Verify availability and artifact checksums in the release metadata; see the root [README](../../README.md) for installation. The executable is `wcc-mcp`; `wcc-mcp --help` and `wcc-mcp --version` terminate without starting the server. No unpublished `@westcoastcharts/mcp` npm package is required.
 
 ## Local stdio
 

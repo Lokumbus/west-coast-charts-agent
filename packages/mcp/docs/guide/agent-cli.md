@@ -1,4 +1,4 @@
-# `wcc`: command reference (v0.2.2)
+# `wcc`: command reference (v0.2.3)
 
 **Machine-readable contract:** `wcc schema`. It validates against https://clispec.dev/schema/v0.3.json, and `wcc --help --json` prints the same document. Narrow it to one command with `wcc schema chart render`.
 
