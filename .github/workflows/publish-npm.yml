@@ -1,6 +1,7 @@
 name: Publish prepacked npm release
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - v0.2.3
@@ -35,4 +36,4 @@ jobs:
           if-no-files-found: error
           retention-days: 90
       - name: Publish exact verified archive with provenance
-        run: npm publish releases/west-coast-charts-agent-0.2.3.tgz --provenance --access public --ignore-scripts
+        run: npm publish ./releases/west-coast-charts-agent-0.2.3.tgz --provenance --access public --ignore-scripts
