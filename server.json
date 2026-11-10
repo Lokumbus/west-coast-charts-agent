@@ -1,0 +1,55 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Lokumbus/west-coast-charts-agent",
+  "title": "WestCoast Charts",
+  "description": "Validate, render (SVG/PNG) and describe WestCoast Charts specs headlessly, with a data table.",
+  "websiteUrl": "https://westcoast-charts.com/agents/",
+  "repository": {
+    "url": "https://github.com/Lokumbus/west-coast-charts-agent",
+    "source": "github",
+    "id": "1436810832"
+  },
+  "version": "0.2.4",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "west-coast-charts-agent",
+      "version": "0.2.4",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "WCC_LICENSE_KEY",
+          "description": "Premium licence key. Only for Premium chart types; requires the separately supplied complete library.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "WCC_LIB_ROOT",
+          "description": "Path to an installed WestCoast Charts library (e.g. the Premium package). Default: the resolved west-coast-charts.",
+          "isRequired": false
+        },
+        {
+          "name": "WCC_DEFAULT_THEME",
+          "description": "Theme when a spec sets none.",
+          "default": "light",
+          "choices": ["light", "dark"]
+        },
+        {
+          "name": "WCC_EVALUATION",
+          "description": "1 = Premium types without a key render a watermarked preview (needs the Premium runtime).",
+          "default": "0",
+          "choices": ["0", "1"]
+        },
+        {
+          "name": "WCC_MAX_PIXELS",
+          "description": "Upper limit for rendered PNG pixels.",
+          "isRequired": false
+        }
+      ]
+    }
+  ]
+}
