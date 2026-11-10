@@ -1,7 +1,7 @@
 {
   "name": "@wcc-agent/render-core",
   "private": true,
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "src/index.js",
   "license": "MIT",
   "engines": {
@@ -10,7 +10,8 @@
   "dependencies": {
     "@resvg/resvg-js": "2.6.2",
     "jsdom": "26.1.0",
-    "opentype.js": "2.0.0"
+    "opentype.js": "2.0.0",
+    "west-coast-charts": ">=1.1.5 <1.2.0"
   },
   "files": [
     "src/",
@@ -19,13 +20,5 @@
     "fonts/*.json",
     "fonts/FONTS.md",
     "examples/"
-  ],
-  "peerDependencies": {
-    "west-coast-charts": ">=1.1.1 <1.2.0"
-  },
-  "peerDependenciesMeta": {
-    "west-coast-charts": {
-      "optional": true
-    }
-  }
+  ]
 }

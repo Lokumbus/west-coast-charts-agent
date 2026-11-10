@@ -3,7 +3,7 @@
 Consumers are `packages/cli` (`wcc`) and `packages/mcp`. The public wrapper exports this API as `west-coast-charts-agent/render-core`.
 
 - Public API: `west-coast-charts-agent/render-core`, CommonJS, Node >= 20; source workspace `@wcc-agent/render-core` remains private.
-- Library: a compatible West Coast Charts 1.1.x distribution for agent tools 0.2.3, resolved from explicit `WCC_LIB_ROOT` or the installed `west-coast-charts/package.json`. No developer-worktree fallback is used.
+- Library: a compatible West Coast Charts 1.1.x distribution for agent tools 0.2.4, resolved from explicit `WCC_LIB_ROOT` or the installed `west-coast-charts/package.json`. No developer-worktree fallback is used.
 - Real validator: `dist/agent/validate.common.js`; options: `dist/schema/wcc-options.schema.json`; description: `dist/agent/describe.min.js`. All must come from that same installation. Missing components fail explicitly.
 - `chart.describe()` is loaded only from that library's matching module; no `WCC_DESCRIBE_FILE` override or table fallback is used.
 

@@ -1,6 +1,6 @@
-# West Coast Charts MCP server 0.2.3
+# West Coast Charts MCP server 0.2.4
 
-Use `npm install 'west-coast-charts@>=1.1.1 <1.2.0' west-coast-charts-agent@0.2.3` for the supported 0.2.3 / Core 1.1.x range. Verify availability and artifact checksums in the release metadata; see the root [README](../../README.md) for installation. The executable is `wcc-mcp`; `wcc-mcp --help` and `wcc-mcp --version` terminate without starting the server. No unpublished `@westcoastcharts/mcp` npm package is required.
+Run `npx -y west-coast-charts-agent` to start the stdio server, or use `npm install 'west-coast-charts@>=1.1.5 <1.2.0' west-coast-charts-agent@0.2.4` for the supported 0.2.4 / Core 1.1.x range. Verify availability and artifact checksums in the release metadata; see the root [README](../../README.md) for installation. The executable is `wcc-mcp`; `wcc-mcp --help` and `wcc-mcp --version` terminate without starting the server. No unpublished `@westcoastcharts/mcp` npm package is required.
 
 ## Local stdio
 
@@ -29,3 +29,7 @@ Examples and typed options may include Premium vocabulary without including Prem
 ## Distribution status
 
 The supported release format is the single agent `.tgz`, with native PNG dependencies selected by npm for the installation platform. The repository's empty MCP registry package list describes that separate registry; it does not establish npm availability. Each release has its own immutable version and artifact metadata; the 0.2.1 release is not rewritten by 0.2.2. MCPB metadata is a template, not a downloadable bundle; no zero-hash or nonexistent bundle is advertised. Use the tested stdio executable in desktop clients.
+
+## Designations
+
+ApexCharts, react-apexcharts, vue3-apexcharts and ng-apexcharts are designations of Apex Software, Inc., which states it is a subsidiary of Infragistics, Inc. WestCoast Charts is an independent product of WestCoast Software (Inh. Peter Kannengießer) and is not affiliated with, sponsored or endorsed by Apex Software, Inc. or Infragistics, Inc. Parts of WestCoast Charts are based on ApexCharts 4.7.0, released under the MIT License (Copyright (c) 2018 ApexCharts). "ApexCharts-compatible" means that WestCoast Charts largely supports the configuration options of ApexCharts 4.7.0; differences are listed in the migration guide.

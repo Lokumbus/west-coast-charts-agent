@@ -1,20 +1,32 @@
 # West Coast Charts agent tools
 
-`west-coast-charts-agent` 0.2.3 provides the `wcc` CLI, the `wcc-mcp` stdio/HTTP server, and the headless render API. Use this version with West Coast Charts **1.1.x releases from 1.1.1 onward** and the matching validator, schema and describe module.
+`west-coast-charts-agent` 0.2.4 provides the `wcc` CLI, the `wcc-mcp` stdio/HTTP server, and the headless render API. Use this version with West Coast Charts **1.1.x releases from 1.1.5 onward** and the matching validator, schema and describe module.
 
 ## Install
 
 Node.js 20 or newer is required. The release installation command is:
 
 ```sh
-npm install 'west-coast-charts@>=1.1.1 <1.2.0' west-coast-charts-agent@0.2.3
+npm install 'west-coast-charts@>=1.1.5 <1.2.0' west-coast-charts-agent@0.2.4
 npx --no-install wcc --help
 npx --no-install wcc version --json
 npx --no-install wcc-mcp --help
 npx --no-install wcc-mcp --version
 ```
 
-This command selects agent tools 0.2.3 and a compatible West Coast Charts 1.1.x version. The agent package declares the optional peer range `>=1.1.1 <1.2.0`; npm resolves the matching Core version normally. Release availability and artifact checksums are recorded in the release metadata; this installation guide does not replace that verification. Version 0.2.1 remains the immutable, published installation-fix release. The public Core package and agent package contain no Premium implementation or licence issuer. No private workspace package or access token is needed for their published npm installation. MCP registry listing is a separate channel and is not asserted here.
+This command selects agent tools 0.2.4 and a compatible West Coast Charts 1.1.x version. Since 0.2.4 the agent package declares `west-coast-charts` `>=1.1.5 <1.2.0` as a regular dependency (previously an optional peer), so npm and npx install a matching Core automatically; an already installed compatible Core (including the separately supplied complete package with the same name) is reused. Release availability and artifact checksums are recorded in the release metadata; this installation guide does not replace that verification. Version 0.2.1 remains the immutable, published installation-fix release. The public Core package and agent package contain no Premium implementation or licence issuer. No private workspace package or access token is needed for their published npm installation. The package carries `mcpName` `io.github.Lokumbus/west-coast-charts-agent` for the official MCP Registry; a registry listing is a separate step and is not asserted here.
+
+## Run the MCP server with npx
+
+```sh
+npx -y west-coast-charts-agent
+```
+
+starts the stdio MCP server (the `west-coast-charts-agent` binary is an alias of `wcc-mcp`). Since 0.2.4 the free `west-coast-charts` Core (`>=1.1.5 <1.2.0`) is a regular dependency, so npx installs it automatically. For the Premium runtime, point `WCC_LIB_ROOT` at the separately supplied complete library. MCP client configuration:
+
+```json
+{ "mcpServers": { "west-coast-charts": { "command": "npx", "args": ["-y", "west-coast-charts-agent"] } } }
+```
 
 ## Render and verify
 
@@ -49,7 +61,7 @@ Thirteen Premium types are recognized, including `quintTimeline`, `quintConverge
 
 The source workspace keeps three private workspace packages. From a complete source checkout, `npm ci` installs the locked development dependencies and `npm test` runs the workspace tests. Select the complete test runtime through `WCC_LIB_ROOT`; Premium acceptance requires that separate runtime. Optional signing acceptance reads protected fixture paths without printing keys. A successful Core-only test run does not prove Premium support.
 
-Release packaging is a maintainer operation, not an installed-package command. The internal pipeline must export an exact reviewed Git commit into an isolated staging directory, copy the explicit source/font/licence allowlist, resolve internal imports, pin public dependencies from the lockfile, and record file hashes. It must bind the tested Core and complete-runtime artifacts by exact version, commit and SHA256 before packing 0.2.3. Fresh consumers must install the resulting archive outside the workspace and prove CLI/MCP imports, rendering and licence failures without ancestor dependency fallback. The installed package does not include build scripts or tests. The older source-only `scripts/build-distribution.cjs` and isolated-install recipes contain RC7 fixture pins; they are not the 1.1.1 release pipeline and must not be used to claim current provenance.
+Release packaging is a maintainer operation, not an installed-package command. The internal pipeline must export an exact reviewed Git commit into an isolated staging directory, copy the explicit source/font/licence allowlist, resolve internal imports, pin public dependencies from the lockfile, and record file hashes. It must bind the tested Core and complete-runtime artifacts by exact version, commit and SHA256 before packing a release. Fresh consumers must install the resulting archive outside the workspace and prove CLI/MCP imports, rendering and licence failures without ancestor dependency fallback. The installed package does not include build scripts or tests. The older source-only `scripts/build-distribution.cjs` and isolated-install recipes contain RC7 fixture pins; they are not the 1.1.1 release pipeline and must not be used to claim current provenance.
 
 Tooling: MIT. Font copyright, SIL OFL texts and modifications: [font provenance](../../../render-core/fonts/FONTS.md). Chart-library licenses and attribution remain in the separate library distribution. See [NOTICE](../../../../NOTICE).
 
@@ -60,3 +72,7 @@ Version 0.2.0 missed one internal CLI import and can fail with `MODULE_NOT_FOUND
 ## 0.2.2 HTTP authorization correction
 
 Version 0.2.2 added fail-closed JWKS configuration: issuer, audience and required scopes must all be explicitly supplied; tokens must satisfy signature, issuer, audience, expiry and scope checks. Cached render resources are separated by issuer, subject and client identity. This correction requires 0.2.2; 0.2.1 is not rewritten or silently upgraded. Local stdio usage retains its existing filesystem permission boundary. See [HTTP deployment and authorization](http-security.md) for the exact environment contract and supported protocol.
+
+## Designations
+
+ApexCharts, react-apexcharts, vue3-apexcharts and ng-apexcharts are designations of Apex Software, Inc., which states it is a subsidiary of Infragistics, Inc. WestCoast Charts is an independent product of WestCoast Software (Inh. Peter Kannengießer) and is not affiliated with, sponsored or endorsed by Apex Software, Inc. or Infragistics, Inc. Parts of WestCoast Charts are based on ApexCharts 4.7.0, released under the MIT License (Copyright (c) 2018 ApexCharts). "ApexCharts-compatible" means that WestCoast Charts largely supports the configuration options of ApexCharts 4.7.0; differences are listed in the migration guide.

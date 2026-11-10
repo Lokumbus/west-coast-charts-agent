@@ -1,9 +1,25 @@
 {
   "name": "west-coast-charts-agent",
-  "version": "0.2.3",
+  "mcpName": "io.github.Lokumbus/west-coast-charts-agent",
+  "version": "0.2.4",
   "description": "CLI and MCP tools for real West Coast Charts validation, SVG/PNG rendering and chart description.",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "charts",
+    "chart-rendering",
+    "svg",
+    "png",
+    "data-visualization",
+    "headless",
+    "cli",
+    "ai-agents",
+    "west-coast-charts",
+    "apexcharts-compatible"
+  ],
   "license": "MIT",
-  "author": "West Coast Software, Inh. Peter Kannengie\u00dfer",
+  "author": "West Coast Software, Inh. Peter Kannengießer",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lokumbus/west-coast-charts-agent.git"
@@ -13,6 +29,7 @@
     "node": ">=20"
   },
   "bin": {
+    "west-coast-charts-agent": "packages/mcp/bin/wcc-mcp.js",
     "wcc": "packages/cli/bin/wcc.js",
     "wcc-mcp": "packages/mcp/bin/wcc-mcp.js"
   },
@@ -29,15 +46,8 @@
     "zod": "4.6.7",
     "@resvg/resvg-js": "2.6.2",
     "jsdom": "26.1.0",
-    "opentype.js": "2.0.0"
-  },
-  "peerDependencies": {
-    "west-coast-charts": ">=1.1.1 <1.2.0"
-  },
-  "peerDependenciesMeta": {
-    "west-coast-charts": {
-      "optional": true
-    }
+    "opentype.js": "2.0.0",
+    "west-coast-charts": ">=1.1.5 <1.2.0"
   },
   "publishConfig": {
     "access": "public",
