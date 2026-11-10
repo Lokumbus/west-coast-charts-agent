@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "serverInfo": {
+    "name": "west-coast-charts",
+    "title": "West Coast Charts",
+    "version": "0.2.4",
+    "websiteUrl": "https://westcoast-charts.com"
+  },
+  "protocolVersion": "2025-11-25",
+  "capabilities": [
+    "tools",
+    "resources",
+    "prompts",
+    "completions"
+  ],
+  "tools": [
+    "render_chart",
+    "validate_chart",
+    "describe_chart",
+    "get_schema",
+    "list_chart_types",
+    "list_examples",
+    "get_example"
+  ],
+  "render": {
+    "tool": "render_chart",
+    "isError": false,
+    "containsSvg": true,
+    "sample": "{\"content\":[{\"type\":\"text\",\"text\":\"Rendered bar 800x450 svg, 12789 bytes, sha256 88531898d6de, wcc://renders/88531898d6de8136.svg\\n\\nVerification table (what was drawn; source: describe):\\nColumn char"
+  }
+}

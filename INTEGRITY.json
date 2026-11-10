@@ -1,13 +1,13 @@
 {
-  "version": "0.2.2",
+  "version": "0.2.4",
   "files": [
     {
       "path": "docs/cli.md",
-      "sha256": "132491bd7d58fa0f8fbfa5cf5e87c415b1770489580f3291d27eec7314bf28f0"
+      "sha256": "5227720e2817acebaa73fd319d446e01c6485c1dc124a0c9d9ddcd909d00a786"
     },
     {
       "path": "docs/render-core-api.md",
-      "sha256": "9eab602dd2ec6cd6633e737cd1af527fdb4e3284d59bd06e3d18d8077f23dfdc"
+      "sha256": "c2a80bf7c0cb489da9ee25c452fc3a8659d71d107fb06d75e1988c04347a063d"
     },
     {
       "path": "LICENSE",
@@ -27,7 +27,7 @@
     },
     {
       "path": "packages/cli/package.json",
-      "sha256": "95fb005d50ea0bc38b37e1f52322342d47e791ca4d0f621043a7733c967ad443"
+      "sha256": "4a9ed3f51ce83868948071c94ba5ef61904ea658f9cf9024f4fc7ac37d405d66"
     },
     {
       "path": "packages/cli/skill/SKILL.md",
@@ -51,11 +51,11 @@
     },
     {
       "path": "packages/mcp/docs/guide/agent-cli.md",
-      "sha256": "132491bd7d58fa0f8fbfa5cf5e87c415b1770489580f3291d27eec7314bf28f0"
+      "sha256": "27869b21d826495524ae9df526ed442a70ee0b3e516ce06fa124a0d07bbca9d0"
     },
     {
       "path": "packages/mcp/docs/guide/agent-install.md",
-      "sha256": "dbf7869d126035d3f68362e050b3bb8ce36eb53b3256ccdf17f9515250858cfb"
+      "sha256": "2f4ccb1c7531cf757fd1bf41baf051ce69cc1c2a92ea18e6c9f41f7b1c669294"
     },
     {
       "path": "packages/mcp/docs/guide/http-security.md",
@@ -67,11 +67,11 @@
     },
     {
       "path": "packages/mcp/package.json",
-      "sha256": "df51a798e8cb7934ad3f3c8a23df4d609a66486a3200f1c473910fdd6d82ec10"
+      "sha256": "9384957640966fc9a03b6a485df1e86011e63512b73c1e531bb2730e4e785d9e"
     },
     {
       "path": "packages/mcp/README.md",
-      "sha256": "751984c2fa0a54a54e88e0153f56e27a550c3bb6a64adc419c3ce966c81bb84c"
+      "sha256": "be613acf4a3dc8693758a028a5b303fb5fb48dd9a98593df1d203c5a7ec55f65"
     },
     {
       "path": "packages/mcp/src/card.js",
@@ -335,7 +335,7 @@
     },
     {
       "path": "packages/render-core/package.json",
-      "sha256": "c7df55dfc2a49e089ffa765379ece3e989e8bc330ffd868df69623651cea2663"
+      "sha256": "74df2dde006a2c14431306eb69b1de71772c8e39b85c8cda02c65714a05c9924"
     },
     {
       "path": "packages/render-core/src/errors.js",
@@ -383,15 +383,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "02dd35f359faa5290a1d21b9775cf8269e271aa35d83de0a4fda2ec6282aa285"
+      "sha256": "97c1d143e5b61b09cac1f7c223e6fef939048c67da4b959219c9d88e0925c58f"
     },
     {
       "path": "package.json",
-      "sha256": "89d84ad06715370e13fd774d6c9fc6825339d42af901aab7c36a486d520bcfff"
+      "sha256": "b703b3f9c6f04c277ad87683e71bb2f2bd6add484ec41dc29593b66d842bfea3"
     },
     {
       "path": "SOURCE-PROVENANCE.json",
-      "sha256": "7d7ca95b3a54b3ca3d343dde52b9bf438560bea4ea21d7cc8c22f366a7585508"
+      "sha256": "6651f143ec1d617986f4f9a0768e14f98eb0c788caa899041d265360cc49d628"
     }
   ]
 }

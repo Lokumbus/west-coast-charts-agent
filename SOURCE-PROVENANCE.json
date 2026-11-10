@@ -1,20 +1,21 @@
 {
   "schema": "wcc-agent-source/2",
-  "version": "0.2.2",
-  "sourceCommit": "5b83d7c805d165737b9be607424f4961629515f1",
+  "version": "0.2.4",
+  "sourceCommit": "5c591dcb0a4fa63952c4a1e7230d17cfa6cfc49d",
   "sourceTag": null,
   "buildKind": "exact-commit-distribution",
   "library": {
-    "version": "1.1.1",
-    "commit": "56a7708437f1932ceea3b742db7268a6857133cf",
-    "tag": "v1.1.1",
-    "sha256": "75dfc0e458a24a035b0ddcd1eeb69dd66ac80ad5528143e55e45129e8a1caaaf",
-    "bytes": 3338376,
-    "manifestSha256": "f506003ec2343dd354cdeb291c9b59fdcc99f28dc139e700b1e534f27a0e651c",
-    "runtimeBundled": false
+    "version": "1.1.6",
+    "commit": "2c77b2b963723c22d4047a1dd75d8c8330989b16",
+    "tag": "v1.1.6",
+    "sha256": "a413c7c6e312bb44328ebb18dba616ccc5dab10058c3750c1621a3f8e5a8e901",
+    "bytes": 3368662,
+    "manifestSha256": "daa8acd918ca2577cee011467cf2f661d6fc6cd49396a28b9adfe153cba2095f",
+    "runtimeBundled": false,
+    "relation": "regular dependency (not bundled); the listed version is the Core archive this release was verified against"
   },
-  "sourcePackageSha256": "5c44b6445a966698a9aac0993a37b989271ddddab9dcf4357cd591bf3a3ea9f7",
-  "sourceLockSha256": "1a50435d4400f22b8bb67e37ebaf30d41f9811bb3fb29a1353cc35092e451a6a",
+  "sourcePackageSha256": "6e58fd1af9a1f02d3aec8f9419b63e3a58a7cf376857de7538b9b230251b2614",
+  "sourceLockSha256": "b82eebbca31efeb24d47edc0e28f944a8bee005af21483c33caf83e62af42bae",
   "helperSha256": "7c78a13e1a4721b41778f6f9840a488d313185716c8282a383baca35714260ab",
   "importClosure": {
     "helperSha256": "5ea4cbff35d9179df77f0316b5b1216caab519fc11b08af6804c26d2d94a0413",
@@ -28,13 +29,13 @@
     {
       "path": "docs/cli.md",
       "bytes": 6149,
-      "sha256": "132491bd7d58fa0f8fbfa5cf5e87c415b1770489580f3291d27eec7314bf28f0",
+      "sha256": "5227720e2817acebaa73fd319d446e01c6485c1dc124a0c9d9ddcd909d00a786",
       "mode": "100644"
     },
     {
       "path": "docs/render-core-api.md",
-      "bytes": 9552,
-      "sha256": "9eab602dd2ec6cd6633e737cd1af527fdb4e3284d59bd06e3d18d8077f23dfdc",
+      "bytes": 9559,
+      "sha256": "c2a80bf7c0cb489da9ee25c452fc3a8659d71d107fb06d75e1988c04347a063d",
       "mode": "100644"
     },
     {
@@ -53,7 +54,7 @@
       "path": "packages/cli/bin/wcc.js",
       "bytes": 355,
       "sha256": "3e994b0256960ee3ebfad89c4e6cb3878754b6ec179f1d880cb94a7ee08643e3",
-      "mode": "100755"
+      "mode": "100644"
     },
     {
       "path": "packages/cli/LICENSE",
@@ -63,8 +64,8 @@
     },
     {
       "path": "packages/cli/package.json",
-      "bytes": 435,
-      "sha256": "58f9f60074af7914f1461412b3022278e3754dda0981150fd39438870ec63225",
+      "bytes": 342,
+      "sha256": "4a9ed3f51ce83868948071c94ba5ef61904ea658f9cf9024f4fc7ac37d405d66",
       "mode": "100644"
     },
     {
@@ -95,18 +96,18 @@
       "path": "packages/mcp/bin/wcc-mcp.js",
       "bytes": 2112,
       "sha256": "e312e49cf3b08e12aeacf9a67bc8ed2104d9c427f546f569e1d3015363d0147f",
-      "mode": "100755"
+      "mode": "100644"
     },
     {
       "path": "packages/mcp/docs/guide/agent-cli.md",
       "bytes": 6149,
-      "sha256": "132491bd7d58fa0f8fbfa5cf5e87c415b1770489580f3291d27eec7314bf28f0",
+      "sha256": "27869b21d826495524ae9df526ed442a70ee0b3e516ce06fa124a0d07bbca9d0",
       "mode": "100644"
     },
     {
       "path": "packages/mcp/docs/guide/agent-install.md",
-      "bytes": 6132,
-      "sha256": "dbf7869d126035d3f68362e050b3bb8ce36eb53b3256ccdf17f9515250858cfb",
+      "bytes": 7769,
+      "sha256": "2f4ccb1c7531cf757fd1bf41baf051ce69cc1c2a92ea18e6c9f41f7b1c669294",
       "mode": "100644"
     },
     {
@@ -123,14 +124,14 @@
     },
     {
       "path": "packages/mcp/package.json",
-      "bytes": 1118,
-      "sha256": "1e2efdef1deed7c825ebb2a20f4ef7f802675c5a234027b0a0a18209ad25a034",
+      "bytes": 754,
+      "sha256": "9384957640966fc9a03b6a485df1e86011e63512b73c1e531bb2730e4e785d9e",
       "mode": "100644"
     },
     {
       "path": "packages/mcp/README.md",
-      "bytes": 3025,
-      "sha256": "751984c2fa0a54a54e88e0153f56e27a550c3bb6a64adc419c3ce966c81bb84c",
+      "bytes": 3750,
+      "sha256": "be613acf4a3dc8693758a028a5b303fb5fb48dd9a98593df1d203c5a7ec55f65",
       "mode": "100644"
     },
     {
@@ -525,8 +526,8 @@
     },
     {
       "path": "packages/render-core/package.json",
-      "bytes": 558,
-      "sha256": "433284720339cf79e86c861107fcb7f81d9b3d7886ec8b45d752f46c5600b7ac",
+      "bytes": 441,
+      "sha256": "74df2dde006a2c14431306eb69b1de71772c8e39b85c8cda02c65714a05c9924",
       "mode": "100644"
     },
     {
@@ -597,35 +598,17 @@
     },
     {
       "path": "README.md",
-      "bytes": 6151,
-      "sha256": "02dd35f359faa5290a1d21b9775cf8269e271aa35d83de0a4fda2ec6282aa285",
+      "bytes": 7788,
+      "sha256": "97c1d143e5b61b09cac1f7c223e6fef939048c67da4b959219c9d88e0925c58f",
       "mode": "100644"
     }
   ],
   "transforms": [
     {
-      "path": "packages/cli/package.json",
-      "sourceSha256": "58f9f60074af7914f1461412b3022278e3754dda0981150fd39438870ec63225",
-      "sha256": "95fb005d50ea0bc38b37e1f52322342d47e791ca4d0f621043a7733c967ad443",
-      "reason": "Remove bundled workspace dependencies/development scripts; pin public direct dependencies from committed lock; align Node>=20 and optional library peer."
-    },
-    {
-      "path": "packages/mcp/package.json",
-      "sourceSha256": "1e2efdef1deed7c825ebb2a20f4ef7f802675c5a234027b0a0a18209ad25a034",
-      "sha256": "df51a798e8cb7934ad3f3c8a23df4d609a66486a3200f1c473910fdd6d82ec10",
-      "reason": "Remove bundled workspace dependencies/development scripts; pin public direct dependencies from committed lock; align Node>=20 and optional library peer."
-    },
-    {
-      "path": "packages/render-core/package.json",
-      "sourceSha256": "433284720339cf79e86c861107fcb7f81d9b3d7886ec8b45d752f46c5600b7ac",
-      "sha256": "c7df55dfc2a49e089ffa765379ece3e989e8bc330ffd868df69623651cea2663",
-      "reason": "Remove bundled workspace dependencies/development scripts; pin public direct dependencies from committed lock; align Node>=20 and optional library peer."
-    },
-    {
       "path": "package.json",
-      "sourceSha256": "5c44b6445a966698a9aac0993a37b989271ddddab9dcf4357cd591bf3a3ea9f7",
-      "sha256": "89d84ad06715370e13fd774d6c9fc6825339d42af901aab7c36a486d520bcfff",
-      "reason": "Explicit single public distribution with both bins, bundled render-core, Node>=20, committed-lock direct dependencies and explicit optional library peer; no workspaces or private flag."
+      "sourceSha256": "6e58fd1af9a1f02d3aec8f9419b63e3a58a7cf376857de7538b9b230251b2614",
+      "sha256": "b703b3f9c6f04c277ad87683e71bb2f2bd6add484ec41dc29593b66d842bfea3",
+      "reason": "Distribution package.json: workspaces removed; otherwise identical to the committed root package.json."
     }
   ],
   "dependencies": {
@@ -670,6 +653,13 @@
       "resolved": "https://registry.npmjs.org/opentype.js/-/opentype.js-2.0.0.tgz",
       "integrity": "sha512-kCyjv6xdDY1W/jLWZ/L3QhhTlKUqDZMQ5+Jdlw12b3dXkKNpYBqqlMMj0YDQPShWFTMwgZI1hG14kN3XUDSg/A==",
       "license": "MIT"
+    },
+    "west-coast-charts": {
+      "version": "1.1.5",
+      "resolved": "https://registry.npmjs.org/west-coast-charts/-/west-coast-charts-1.1.5.tgz",
+      "integrity": "sha512-I2BRXDPCy1MGpzRlwE52apLkq2J98glBLV0QV9tYw4qRvIeoG9iR3UkPQ5Fjk6ShENqCtRAlExzK5mS78J1VUw==",
+      "license": "MIT",
+      "note": "lockfile resolution at packing time; consumers resolve the declared range"
     }
   },
   "imports": [
@@ -1163,12 +1153,12 @@
     {
       "path": "docs/cli.md",
       "bytes": 6149,
-      "sha256": "132491bd7d58fa0f8fbfa5cf5e87c415b1770489580f3291d27eec7314bf28f0"
+      "sha256": "5227720e2817acebaa73fd319d446e01c6485c1dc124a0c9d9ddcd909d00a786"
     },
     {
       "path": "docs/render-core-api.md",
-      "bytes": 9552,
-      "sha256": "9eab602dd2ec6cd6633e737cd1af527fdb4e3284d59bd06e3d18d8077f23dfdc"
+      "bytes": 9559,
+      "sha256": "c2a80bf7c0cb489da9ee25c452fc3a8659d71d107fb06d75e1988c04347a063d"
     },
     {
       "path": "LICENSE",
@@ -1193,7 +1183,7 @@
     {
       "path": "packages/cli/package.json",
       "bytes": 342,
-      "sha256": "95fb005d50ea0bc38b37e1f52322342d47e791ca4d0f621043a7733c967ad443"
+      "sha256": "4a9ed3f51ce83868948071c94ba5ef61904ea658f9cf9024f4fc7ac37d405d66"
     },
     {
       "path": "packages/cli/skill/SKILL.md",
@@ -1223,12 +1213,12 @@
     {
       "path": "packages/mcp/docs/guide/agent-cli.md",
       "bytes": 6149,
-      "sha256": "132491bd7d58fa0f8fbfa5cf5e87c415b1770489580f3291d27eec7314bf28f0"
+      "sha256": "27869b21d826495524ae9df526ed442a70ee0b3e516ce06fa124a0d07bbca9d0"
     },
     {
       "path": "packages/mcp/docs/guide/agent-install.md",
-      "bytes": 6132,
-      "sha256": "dbf7869d126035d3f68362e050b3bb8ce36eb53b3256ccdf17f9515250858cfb"
+      "bytes": 7769,
+      "sha256": "2f4ccb1c7531cf757fd1bf41baf051ce69cc1c2a92ea18e6c9f41f7b1c669294"
     },
     {
       "path": "packages/mcp/docs/guide/http-security.md",
@@ -1243,12 +1233,12 @@
     {
       "path": "packages/mcp/package.json",
       "bytes": 754,
-      "sha256": "df51a798e8cb7934ad3f3c8a23df4d609a66486a3200f1c473910fdd6d82ec10"
+      "sha256": "9384957640966fc9a03b6a485df1e86011e63512b73c1e531bb2730e4e785d9e"
     },
     {
       "path": "packages/mcp/README.md",
-      "bytes": 3025,
-      "sha256": "751984c2fa0a54a54e88e0153f56e27a550c3bb6a64adc419c3ce966c81bb84c"
+      "bytes": 3750,
+      "sha256": "be613acf4a3dc8693758a028a5b303fb5fb48dd9a98593df1d203c5a7ec55f65"
     },
     {
       "path": "packages/mcp/src/card.js",
@@ -1577,8 +1567,8 @@
     },
     {
       "path": "packages/render-core/package.json",
-      "bytes": 549,
-      "sha256": "c7df55dfc2a49e089ffa765379ece3e989e8bc330ffd868df69623651cea2663"
+      "bytes": 441,
+      "sha256": "74df2dde006a2c14431306eb69b1de71772c8e39b85c8cda02c65714a05c9924"
     },
     {
       "path": "packages/render-core/src/errors.js",
@@ -1637,13 +1627,14 @@
     },
     {
       "path": "README.md",
-      "bytes": 6151,
-      "sha256": "02dd35f359faa5290a1d21b9775cf8269e271aa35d83de0a4fda2ec6282aa285"
+      "bytes": 7788,
+      "sha256": "97c1d143e5b61b09cac1f7c223e6fef939048c67da4b959219c9d88e0925c58f"
     },
     {
       "path": "package.json",
-      "bytes": 5854,
-      "sha256": "89d84ad06715370e13fd774d6c9fc6825339d42af901aab7c36a486d520bcfff"
+      "bytes": 6129,
+      "sha256": "b703b3f9c6f04c277ad87683e71bb2f2bd6add484ec41dc29593b66d842bfea3"
     }
-  ]
+  ],
+  "dependencyRange": ">=1.1.5 <1.2.0"
 }

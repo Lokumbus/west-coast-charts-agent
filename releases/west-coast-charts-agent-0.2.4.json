@@ -1,0 +1,27 @@
+{
+  "schema": "wcc-npm-prepacked-release/1",
+  "name": "west-coast-charts-agent",
+  "version": "0.2.4",
+  "archive": "releases/west-coast-charts-agent-0.2.4.tgz",
+  "sha256": "9c394c7938e37f6ec19dc0c70c39af5bb8c427dd6ee3386f0ea586f315424cbd",
+  "bytes": 2246593,
+  "sourceCommit": "5c591dcb0a4fa63952c4a1e7230d17cfa6cfc49d",
+  "sourceTag": null,
+  "library": {
+    "version": "1.1.6",
+    "sourceCommit": "2c77b2b963723c22d4047a1dd75d8c8330989b16",
+    "archiveSha256": "a413c7c6e312bb44328ebb18dba616ccc5dab10058c3750c1621a3f8e5a8e901"
+  },
+  "dependencies": {
+    "west-coast-charts": ">=1.1.5 <1.2.0"
+  },
+  "peerDependencies": {},
+  "peerDependenciesMeta": {},
+  "mcpName": "io.github.Lokumbus/west-coast-charts-agent",
+  "bin": {
+    "west-coast-charts-agent": "packages/mcp/bin/wcc-mcp.js",
+    "wcc": "packages/cli/bin/wcc.js",
+    "wcc-mcp": "packages/mcp/bin/wcc-mcp.js"
+  },
+  "integrityFile": "package/INTEGRITY.json"
+}
