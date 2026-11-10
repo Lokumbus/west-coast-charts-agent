@@ -5,14 +5,16 @@ import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const descriptorPath = path.join(root, 'releases/west-coast-charts-agent-0.2.3.json')
+const requested = process.argv[2] || JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8')).version
+if (!/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(requested)) throw new Error('Invalid version argument')
+const descriptorPath = path.join(root, `releases/west-coast-charts-agent-${requested}.json`)
 const descriptor = JSON.parse(fs.readFileSync(descriptorPath, 'utf8'))
 const archivePath = path.resolve(root, descriptor.archive)
 const fail = (message) => { throw new Error(message) }
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex')
 
-if (descriptor.schema !== 'wcc-npm-prepacked-release/1' || descriptor.name !== 'west-coast-charts-agent' || descriptor.version !== '0.2.3') fail('Unexpected release descriptor identity')
-if (descriptor.archive !== 'releases/west-coast-charts-agent-0.2.3.tgz' || !archivePath.startsWith(`${root}${path.sep}`)) fail('Archive path is outside the pinned release location')
+if (descriptor.schema !== 'wcc-npm-prepacked-release/1' || descriptor.name !== 'west-coast-charts-agent' || descriptor.version !== requested) fail('Unexpected release descriptor identity')
+if (descriptor.archive !== `releases/west-coast-charts-agent-${requested}.tgz` || !archivePath.startsWith(`${root}${path.sep}`)) fail('Archive path is outside the pinned release location')
 const archive = fs.readFileSync(archivePath)
 if (archive.length !== descriptor.bytes || digest(archive) !== descriptor.sha256) fail('Release archive bytes or SHA-256 differ from the pinned descriptor')
 if (archive.length > 20 * 1024 * 1024) fail('Release archive exceeds the 20 MiB verifier limit')
@@ -44,11 +46,17 @@ if (packageJson.name !== descriptor.name || packageJson.version !== descriptor.v
 const provenance = JSON.parse(readMember('package/SOURCE-PROVENANCE.json').toString('utf8'))
 if (provenance.sourceCommit !== descriptor.sourceCommit || provenance.sourceTag !== descriptor.sourceTag || provenance.version !== descriptor.version) fail('Packed source provenance does not match descriptor')
 if (provenance.library?.version !== descriptor.library.version || provenance.library?.commit !== descriptor.library.sourceCommit || provenance.library?.sha256 !== descriptor.library.archiveSha256 || provenance.library?.runtimeBundled !== false) fail('Packed Core peer provenance does not match descriptor')
-if (JSON.stringify(packageJson.peerDependencies ?? {}) !== JSON.stringify(descriptor.peerDependencies)) fail('Packed root peer dependency does not match descriptor')
-if (JSON.stringify(packageJson.peerDependenciesMeta ?? {}) !== JSON.stringify(descriptor.peerDependenciesMeta)) fail('Packed root peer metadata does not match descriptor')
+if (JSON.stringify(packageJson.peerDependencies ?? {}) !== JSON.stringify(descriptor.peerDependencies ?? {})) fail('Packed root peer dependency does not match descriptor')
+for (const [dep, range] of Object.entries(descriptor.dependencies ?? {})) if (packageJson.dependencies?.[dep] !== range) fail(`Packed root dependency ${dep} does not match descriptor`)
+if (descriptor.mcpName !== undefined && packageJson.mcpName !== descriptor.mcpName) fail('Packed mcpName does not match descriptor')
+if (descriptor.bin !== undefined && JSON.stringify(packageJson.bin) !== JSON.stringify(descriptor.bin)) fail('Packed bin map does not match descriptor')
+if (descriptor.bin?.[packageJson.name] === undefined && descriptor.mcpName !== undefined) fail('No bin named like the package: npx cannot pick an executable')
+if (JSON.stringify(packageJson.peerDependenciesMeta ?? {}) !== JSON.stringify(descriptor.peerDependenciesMeta ?? {})) fail('Packed root peer metadata does not match descriptor')
 for (const packagePath of ['package/packages/cli/package.json', 'package/packages/mcp/package.json', 'package/packages/render-core/package.json']) {
   const nested = JSON.parse(readMember(packagePath).toString('utf8'))
   if (nested.version !== descriptor.version) fail(`Nested package version mismatch: ${packagePath}`)
-  if (nested.name === '@wcc-agent/render-core' && nested.peerDependencies?.['west-coast-charts'] !== descriptor.peerDependencies['west-coast-charts']) fail('Nested renderer peer dependency does not match descriptor')
+  const nestedRange = nested.dependencies?.['west-coast-charts'] ?? nested.peerDependencies?.['west-coast-charts']
+  const wantRange = descriptor.dependencies?.['west-coast-charts'] ?? descriptor.peerDependencies?.['west-coast-charts']
+  if (nested.name === '@wcc-agent/render-core' && nestedRange !== wantRange) fail('Nested renderer Core range does not match descriptor')
 }
 console.log(JSON.stringify({ name: packageJson.name, version: packageJson.version, archive: descriptor.archive, sha256: descriptor.sha256, bytes: archive.length, payloadFiles: list.length, integrityEntries: integrity.files.length, peerDependencies: packageJson.peerDependencies }, null, 2))
